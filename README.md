@@ -2,7 +2,7 @@
 
 #### Table of contents
 
-1. Lab prerequisites
+1. [Labs](#Labs)
 2. GitHub
 3. Linux terminal
 4. Online simulator
@@ -13,6 +13,8 @@ Command | Description
 ------------ | -------------
 Ctrl+Alt+T | Open Linux terminal in Ubuntu based distributions
 Content in the first column | Content in the second column
+
+##Labs
 
 | **Computer lab exercise** | **Description** |
 | :-- | :-- |
