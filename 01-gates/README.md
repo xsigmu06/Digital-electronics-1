@@ -3,14 +3,24 @@
 ## Github
 
 ### Header
+
 *emphasis*
+
 ### List
+#### Unordered
 * item 1
     * item 1a
 * item 2
+#### Ordered
 1. item 1
     1. item 1a
 2. item 2
+
+### Table
+First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column
 
 ## Online simulator
 
