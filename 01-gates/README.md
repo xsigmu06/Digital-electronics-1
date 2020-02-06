@@ -32,19 +32,19 @@
 
 3. Use online simulator and verify De Morgan's laws.
 
- ![equation](https://latex.codecogs.com/gif.latex?f%20%3D%20a%5Ccdot%20%5Coverline%7Bb%7D%20&plus;%20%5Coverline%7Bb%7D%5Ccdot%20%5Coverline%7Bc%7D)
+![equation](https://latex.codecogs.com/gif.latex?f%20%3D%20a%5Ccdot%20%5Coverline%7Bb%7D%20&plus;%20%5Coverline%7Bb%7D%5Ccdot%20%5Coverline%7Bc%7D)
 
-    &nbsp;
+&nbsp;
 
-    ![equation](https://latex.codecogs.com/gif.latex?f_%7BAND%7D%20%3D)
+![equation](https://latex.codecogs.com/gif.latex?f_%7BAND%7D%20%3D)
     
-    &nbsp;
+&nbsp;
     
-    ![equation](https://latex.codecogs.com/gif.latex?f_%7BOR%7D%20%3D)
+![equation](https://latex.codecogs.com/gif.latex?f_%7BOR%7D%20%3D)
     
-    &nbsp;
+&nbsp;
 
-    ![equation](https://latex.codecogs.com/gif.latex?%5Coverline%28%20%5Coverline%20%7Ba%5Ccdot%20%5Coverline%7Bb%7D%7D%29)
+![equation](https://latex.codecogs.com/gif.latex?%5Coverline%28%20%5Coverline%20%7Ba%5Ccdot%20%5Coverline%7Bb%7D%7D%29)
 
 | **A** | **B** |**C** | ![equation](https://latex.codecogs.com/gif.latex?f) | ![equation](https://latex.codecogs.com/gif.latex?f_%7BAND%7D) | ![equation](https://latex.codecogs.com/gif.latex?f_%7BOR%7D) |
 | :-: | :-: | :-: | :-: | :-: | :-: |
