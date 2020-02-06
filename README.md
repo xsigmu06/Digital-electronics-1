@@ -1,7 +1,5 @@
 # Digital-electronics-1
 
-# *Lab 1: Git version-control system, Online simulator*
-
 #### Table of contents
 
 1. Lab prerequisites
