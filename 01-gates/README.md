@@ -42,11 +42,9 @@
     
 &nbsp;
     
-![equation](https://latex.codecogs.com/gif.latex?f_%7BOR%7D%20%3D)
+![equation](https://latex.codecogs.com/gif.latex?f_%7BOR%7D%20%3D%20%5Coverline%7B%5Coverline%7Ba%7D&plus;b%7D&plus;%5Coverline%7Bb&plus;c%7D)
     
 &nbsp;
-
-![equation](https://latex.codecogs.com/gif.latex?%5Coverline%28%20%5Coverline%20%7Ba%5Ccdot%20%5Coverline%7Bb%7D%7D%29)
 
 | **A** | **B** |**C** | ![equation](https://latex.codecogs.com/gif.latex?f) | ![equation](https://latex.codecogs.com/gif.latex?f_%7BAND%7D) | ![equation](https://latex.codecogs.com/gif.latex?f_%7BOR%7D) |
 | :-: | :-: | :-: | :-: | :-: | :-: |
