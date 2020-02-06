@@ -2,7 +2,7 @@
 
 # *Lab 1: Git version-control system, Online simulator*
 
-####Table of contents
+#### Table of contents
 
 1. Lab prerequisites
 2. GitHub
