@@ -14,7 +14,7 @@ Command | Description
 Ctrl+Alt+T | Open Linux terminal in Ubuntu based distributions
 Content in the first column | Content in the second column
 
-##Labs
+## Labs
 
 | **Computer lab exercise** | **Description** |
 | :-- | :-- |
