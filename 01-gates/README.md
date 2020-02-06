@@ -1,4 +1,16 @@
-# *Lab 1: Git version-control system, Online simulator*
+# Lab 1: Git version-control system, Online simulator
+
+## Github
+
+### Header
+*emphasis*
+### List
+* item 1
+    * item 1a
+* item 2
+1. item 1
+    1. item 1a
+2. item 2
 
 ## Online simulator
 
