@@ -27,4 +27,4 @@ Content in the first column | Content in the second column
 | ... | Lab 7: ... |
 | ... | Lab 8: ... |
 | ... | Lab 9: ... |
-| [project](Labs/project) | Lab 10-13: Project |
+| ... | Lab 10-13: Project |
