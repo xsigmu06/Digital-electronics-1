@@ -46,13 +46,13 @@
 
     ![equation](https://latex.codecogs.com/gif.latex?%5Coverline%28%20%5Coverline%20%7Ba%5Ccdot%20%5Coverline%7Bb%7D%7D%29)
 
- **A** | **B** |**C** | ![equation](https://latex.codecogs.com/gif.latex?f) | ![equation](https://latex.codecogs.com/gif.latex?f_%7BAND%7D) | ![equation](https://latex.codecogs.com/gif.latex?f_%7BOR%7D) |
-    | :-: | :-: | :-: | :-: | :-: | :-: |
-    | 0 | 0 | 0 | 1 | 1 | 1 |
-    | 0 | 0 | 1 | 0 | 0 | 0 |
-    | 0 | 1 | 0 | 0 | 0 | 0 |
-    | 0 | 1 | 1 | 0 | 0 | 0 |
-    | 1 | 0 | 0 | 1 | 1 | 1 |
-    | 1 | 0 | 1 | 1 | 1 | 1 |
-    | 1 | 1 | 0 | 0 | 0 | 0 |
-    | 1 | 1 | 1 | 0 | 0 | 0 |
+| **A** | **B** |**C** | ![equation](https://latex.codecogs.com/gif.latex?f) | ![equation](https://latex.codecogs.com/gif.latex?f_%7BAND%7D) | ![equation](https://latex.codecogs.com/gif.latex?f_%7BOR%7D) |
+| :-: | :-: | :-: | :-: | :-: | :-: |
+| 0 | 0 | 0 | 1 | 1 | 1 |
+| 0 | 0 | 1 | 0 | 0 | 0 |
+| 0 | 1 | 0 | 0 | 0 | 0 |
+| 0 | 1 | 1 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 1 | 1 | 1 |
+| 1 | 0 | 1 | 1 | 1 | 1 |
+| 1 | 1 | 0 | 0 | 0 | 0 |
+| 1 | 1 | 1 | 0 | 0 | 0 |
