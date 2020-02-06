@@ -1,6 +1,6 @@
 # Lab 1: Git version-control system, Online simulator
 
-## Github
+## Github introduction
 
 ### Header
 
