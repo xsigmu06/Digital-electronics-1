@@ -54,8 +54,7 @@ Content in the first column | Content in the second column
 | 1 | 0 | 1 | 0 |
 | 1 | 1 | 0 | 1 |
 
-![and_gates](/home/lab661/Documents/xsigmu06/Digital-electronics-1/01-gates/Main.png)
-
+![and_gates](../../Images/simulator_basic_gates.png)
 3. Use online simulator and verify De Morgan's laws.
 
 ![equation](https://latex.codecogs.com/gif.latex?f%20%3D%20a%5Ccdot%20%5Coverline%7Bb%7D%20&plus;%20%5Coverline%7Bb%7D%5Ccdot%20%5Coverline%7Bc%7D)
