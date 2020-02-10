@@ -41,7 +41,7 @@ Create K-maps for all three functions.
 |  | **A** |
 | :-: | :-: |
 | 0 | 0 |
-| 0 | 1 | **B** |
+| **B** | 0 | 1 | 
 
 
 &nbsp;
