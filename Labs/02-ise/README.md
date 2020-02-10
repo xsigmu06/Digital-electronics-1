@@ -38,10 +38,10 @@ Create K-maps for all three functions.
 
 &nbsp;
 
-|  | **A** |
-| :-: | :-: |
-| 0 | 0 |
-| **B** | 0 | 1 | 
+|  | **A** |  |
+| :-: | :-: | :-: |
+| 0 | 0 |  |
+| 0 | 1 | **B** |
 
 
 &nbsp;
