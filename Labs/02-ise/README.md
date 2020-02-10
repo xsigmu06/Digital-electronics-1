@@ -26,11 +26,11 @@ According to the truth table, create canonical SoP (Sum of Product) or PoS (Prod
 
 &nbsp;
 
-![equation](https://latex.codecogs.com/gif.latex?y_%7BA%3DB%7D%5E%7BSoP%7D%3D)
+![equation](https://latex.codecogs.com/gif.latex?y_%7BA%3DB%7D%5E%7BSoP%7D%3D%5Coverline%7BA%7D%5Ccdot%20%5Coverline%7BB%7D&plus;A%5Ccdot%20B)
 
 &nbsp;
 
-![equation](https://latex.codecogs.com/gif.latex?y_%7BA%3CB%7D%5E%7BPoS%7D%3D)
+![equation](https://latex.codecogs.com/gif.latex?y_%7BA%3CB%7D%5E%7BPoS%7D%3D%28A&plus;B%29%5Ccdot%28%5Coverline%7BA%7D&plus;B%29%5Ccdot%28%5Coverline%7BA%7D&plus;%5Coverline%7BB%7D%29)
 
 &nbsp;
 
