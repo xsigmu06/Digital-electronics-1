@@ -3,6 +3,9 @@
 #### Contents
 
 1. [Lab prerequisites](#Lab-prerequisites)
+2. [Github introduction](#Github introduction)
+3. [Online simulator](#Online simulator)
+4. [Ideas for other tasks](#Ideas-for-other-tasks)
 
 ## Lab prerequisites
 
