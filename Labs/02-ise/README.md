@@ -14,7 +14,7 @@
 | **A** | **B** | **A>B** | **A=B** | **A<B** |
 | :-: | :-: | :-: | :-: | :-: |
 | 0 | 0 | 0 | 1 | 0 |
-| 0 | 1 | 0 | 1 | 1 |
+| 0 | 1 | 0 | 0 | 1 |
 | 1 | 0 | 1 | 0 | 0 |
 | 1 | 1 | 0 | 1 | 0 |
 
@@ -22,7 +22,7 @@ According to the truth table, create canonical SoP (Sum of Product) or PoS (Prod
 
 &nbsp;
 
-![equation](https://latex.codecogs.com/gif.latex?y_%7BA%3EB%7D%5E%7BSoP%7D%3D)
+![equation](https://latex.codecogs.com/gif.latex?y_%7BA%3CB%7D%5E%7BSoP%7D%3DA%5Ccdot%20%5Coverline%7BB%7D)
 
 &nbsp;
 
