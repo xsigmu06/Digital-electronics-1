@@ -1,5 +1,13 @@
 # Lab 1: Git version-control system, Online simulator
 
+#### Contents
+
+1. [Lab prerequisites](#Lab-prerequisites)
+
+## Lab prerequisites
+
+Create an account on [GitHub](https://github.com/) server.
+
 ## Github introduction
 
 ### Header
