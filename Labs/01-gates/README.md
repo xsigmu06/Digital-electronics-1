@@ -26,6 +26,8 @@ Content in the first column | Content in the second column
 
 1. Use online digital circuit simulator [CircuitVerse](https://circuitverse.org/), launch the simulator, draw and verify basic two-input logic gates.
 
+![and_gates](../../Images/Main.png)
+
 2. Run any text editor, such as Visual Studio Code, open `Digital-electronics-1/Labs/01-gates/README.md` file, create/complete tables with logical values, and add a screenshot from the simulator.
 
 | **A** | **NOT** |
@@ -53,8 +55,6 @@ Content in the first column | Content in the second column
 | 0 | 1 | 1 | 0 |
 | 1 | 0 | 1 | 0 |
 | 1 | 1 | 0 | 1 |
-
-![and_gates](/home/lab661/Documents/xsigmu06/Digital-electronics-1/01-gates/Main.png)
 
 3. Use online simulator and verify De Morgan's laws.
 
@@ -85,7 +85,6 @@ Content in the first column | Content in the second column
 
 1. Use online digital circuit simulator, draw the logic diagram according to figure, complete the truth table, and determine the circuit function.
 
-![logic](../../Images/gates_2-4.png)
 
 | **A** | **B** | **Q3** | **Q2** | **Q1** | **Q0** |
 | :-: | :-: | :-: | :-: | :-: | :-: |

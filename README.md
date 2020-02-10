@@ -8,7 +8,7 @@
 
 | **Computer lab exercise** | **Description** |
 | :-- | :-- |
-| [01-gates](/01-gates) | Lab 1: Git version-control system, Online simulator |
+| [01-gates](/Labs/01-gates) | Lab 1: Git version-control system, Online simulator |
 | ... | Lab 2: ... |
 | ... | Lab 3: ... |
 | ... | Lab 4: ... |
