@@ -3,11 +3,11 @@
 #### Contents
 
 1. [Lab prerequisites](#Lab-prerequisites)
-2. [Used hardware components](#Used-hardware-components)
-3. [Synchronize Git and create a new folder](#Synchronize-Git-and-create-a-new-folder)
-4. [Digital circuits in VHDL language](#Digital-circuits-in-VHDL-language)
-5. [Clean project and synchronize git](#Clean-project-and-synchronize-git)
-6. [Ideas for other tasks](#Ideas-for-other-tasks)
+    2. [Used hardware components](#Used-hardware-components)
+    3. [Synchronize Git and create a new folder](#Synchronize-Git-and-create-a-new-folder)
+    4. [Digital circuits in VHDL language](#Digital-circuits-in-VHDL-language)
+    5. [Clean project and synchronize git](#Clean-project-and-synchronize-git)
+    6. [Ideas for other tasks](#Ideas-for-other-tasks)
 
 ## Lab prerequisites
 
