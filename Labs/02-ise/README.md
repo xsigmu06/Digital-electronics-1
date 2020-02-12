@@ -38,9 +38,9 @@ Create K-maps for all three functions.
 
 &nbsp;
 
-|  | **A** |  |                
+| **¬A** | **A** |  |                
 | :-: | :-: | :-: | 
-| 0 | 0 |  |        
+| 0 | 0 | **¬B** |        
 | 0 | 1 | **B** |   
 
 |  | **A** |  |      
