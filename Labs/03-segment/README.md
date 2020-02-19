@@ -2,7 +2,7 @@
 
 #### Contents
 
-1. [Lab prerequisites](#Lab prerequisites)
+1. [Lab prerequisites](#Lab-prerequisites)
 
 ## Lab prerequisites
 
