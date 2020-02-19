@@ -6,10 +6,6 @@
 
 ## Lab prerequisites
 
-1. See [schematic](../../Docs/coolrunner-ii_sch.pdf) or [reference manual](../../Docs/coolrunner-ii_rm.pdf) of the board and find out the connection of 7-segment display. How can you change the position of the character on the display?
-
-2. Complete the decoder conversion table for common anode display. Sketch the symbols to be displayed.
-
 | **Hex** | **Input** | **a** | **b** | **c** | **d** | **e** | **f** | **g** |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | 0 | 0000 | 0 | 0 | 0 | 0 | 0 | 0 | 1 |
