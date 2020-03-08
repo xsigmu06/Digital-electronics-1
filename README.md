@@ -13,7 +13,7 @@
 | [03-segment](/Labs/03-segment) | Lab 3: Hex to seven-segment decoder |
 | [04-adder](/Labs/04-adder) | Lab 4: Binary adder |
 | [05-counter_binary](/Labs/05-counter_binary) | Lab 5: Binary counter |
-| [06-Display_driver|(/Labs/06-display_driver) | Lab 5: Binary counter |
+| [06-Display_driver](/Labs/06-display_driver) | Lab 6: Display driver |
 | ... | Lab 7: ... |
 | ... | Lab 8: ... |
 | ... | Lab 9: ... |
