@@ -107,7 +107,7 @@ BEGIN
         data1_i  <= "0011";
         data2_i  <= "0001";
         data3_i  <= "0100";
-        dp_i <= "1011";
+        dp_i <= "1101";
         wait for clk_i_period;
 
         srst_n_i <= '1';
