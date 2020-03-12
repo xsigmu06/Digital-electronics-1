@@ -36,4 +36,12 @@
 }
 ```
 
+
+
 2. See how to make [signal assignments](https://github.com/tomas-fryza/Digital-electronics-1/wiki/Signal-assignments) outside and inside a process. What is the difference between combinational and sequential processes?
+
+## Simulation
+
+&nbsp;
+    ![simulation](../../Images/06-display_driver.png)
+    &nbsp;
