@@ -53,7 +53,8 @@ begin
 
     -- Turn on LD3 if the input value is equal to "0000"
     -- WRITE YOUR CODE HERE
-	 LD3 <= not (not s_hex(3) and not s_hex(2) and not s_hex(1) and not s_hex(0));
+	 LD3 <= '0' when s_hex = "0000" else
+		 '1';
     -- Turn on LD2 if the input value is A, B, C, D, E, or F
     -- WRITE YOUR CODE HERE
 	 LD2 <= not (s_hex(3) and ( s_hex(2) or s_hex(1) ));
