@@ -14,7 +14,7 @@
 | [04-adder](/Labs/04-adder) | Lab 4: Binary adder |
 | [05-counter_binary](/Labs/05-counter_binary) | Lab 5: Binary counter |
 | [06-Display_driver](/Labs/06-display_driver) | Lab 6: Display driver |
-| ... | Lab 7: ... |
+| [07-Stopwatch](/Labs/07-dtopwatch) | Lab 7: Stopwatch |
 | ... | Lab 8: ... |
 | ... | Lab 9: ... |
 | ... | Lab 10-13: Project |
