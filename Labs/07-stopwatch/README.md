@@ -10,6 +10,6 @@ In this laboratory exercise you will implement BCD counters. You will use the Xi
     ![top](../../Images/7_top.jpg)
     &nbsp;
 &nbsp;
-    ![simulation](../../Images/simulace.png)
+    ![simulation](../../Images/stopwatch.png)
     &nbsp;
 
