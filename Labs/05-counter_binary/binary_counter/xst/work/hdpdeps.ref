@@ -1,0 +1,8 @@
+V3 3
+FL /home/ise/xsigmu06/05-counter_binary/binary_counter/clock_enable.vhd 2020/03/23.19:28:24 P.20131013
+EN work/clock_enable 1584992180 \
+      FL /home/ise/xsigmu06/05-counter_binary/binary_counter/clock_enable.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/clock_enable/Behavioral 1584992181 \
+      FL /home/ise/xsigmu06/05-counter_binary/binary_counter/clock_enable.vhd \
+      EN work/clock_enable 1584992180

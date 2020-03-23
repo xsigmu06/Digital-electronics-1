@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/ise/xsigmu06/05-counter_binary/binary_counter/binary_cnt_tb00_isim_beh.exe" -prj "/home/ise/xsigmu06/05-counter_binary/binary_counter/binary_cnt_tb00_beh.prj" "work.binary_cnt_tb00" 

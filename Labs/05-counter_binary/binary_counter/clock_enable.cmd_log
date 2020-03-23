@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "/home/ise/xsigmu06/05-counter_binary/binary_counter/clock_enable.xst" -ofn "/home/ise/xsigmu06/05-counter_binary/binary_counter/clock_enable.syr" 
+xst -intstyle ise -ifn "/home/ise/xsigmu06/05-counter_binary/binary_counter/clock_enable.xst" -ofn "/home/ise/xsigmu06/05-counter_binary/binary_counter/clock_enable.syr" 
+xst -intstyle ise -ifn "/home/ise/xsigmu06/05-counter_binary/binary_counter/clock_enable.xst" -ofn "/home/ise/xsigmu06/05-counter_binary/binary_counter/clock_enable.syr" 
+xst -intstyle ise -ifn "/home/ise/xsigmu06/05-counter_binary/binary_counter/clock_enable.xst" -ofn "/home/ise/xsigmu06/05-counter_binary/binary_counter/clock_enable.syr" 
+xst -intstyle ise -ifn "/home/ise/xsigmu06/05-counter_binary/binary_counter/clock_enable.xst" -ofn "/home/ise/xsigmu06/05-counter_binary/binary_counter/clock_enable.syr" 
+xst -intstyle ise -ifn "/home/ise/xsigmu06/05-counter_binary/binary_counter/clock_enable.xst" -ofn "/home/ise/xsigmu06/05-counter_binary/binary_counter/clock_enable.syr" 
