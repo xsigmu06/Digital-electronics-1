@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "F:/projekty_de/traffic_lights/traffic_lights.xst" -ofn "F:/projekty_de/traffic_lights/traffic_lights.syr" 
+xst -intstyle ise -ifn "F:/projekty_de/traffic_lights/traffic_lights.xst" -ofn "F:/projekty_de/traffic_lights/traffic_lights.syr" 
+xst -intstyle ise -ifn "F:/projekty_de/traffic_lights/traffic_lights.xst" -ofn "F:/projekty_de/traffic_lights/traffic_lights.syr" 
+xst -intstyle ise -ifn "F:/projekty_de/traffic_lights/traffic_lights.xst" -ofn "F:/projekty_de/traffic_lights/traffic_lights.syr" 
