@@ -15,6 +15,5 @@
 | [05-counter_binary](/Labs/05-counter_binary) | Lab 5: Binary counter |
 | [06-Display_driver](/Labs/06-display_driver) | Lab 6: Display driver |
 | [07-Stopwatch](/Labs/07-stopwatch) | Lab 7: Stopwatch |
-| ... | Lab 8: ... |
-| ... | Lab 9: ... |
-| ... | Lab 10-13: Project |
+| [08-Traffic-lights](/Labs/08-traffic_lights) | Lab 8: Traffic_lights |
+| ... | Lab 9-13: Project |
