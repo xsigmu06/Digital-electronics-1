@@ -7,9 +7,9 @@ In this laboratory exercise you will implement BCD counters. You will use the Xi
 #### Simulation and diagram
 
 &nbsp;
-    ![top](../../Images/7_top.jpg)
+    ![top](../../Images/stopwatch_sch.jpg)
     &nbsp;
 &nbsp;
-    ![simulation](../../Images/stopwatch.png)
+    ![simulation](../../Images/stopwatch_sim.png)
     &nbsp;
 
