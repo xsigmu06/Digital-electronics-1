@@ -1,0 +1,8 @@
+V3 3
+FL /home/ise/xsigmu06/07-stopwatch_v2/stopwatch/stopwatch_counter.vhd 2020/03/25.10:19:26 P.20131013
+EN work/stopwatch 1585131586 \
+      FL /home/ise/xsigmu06/07-stopwatch_v2/stopwatch/stopwatch_counter.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/stopwatch/Behavioral 1585131587 \
+      FL /home/ise/xsigmu06/07-stopwatch_v2/stopwatch/stopwatch_counter.vhd \
+      EN work/stopwatch 1585131586

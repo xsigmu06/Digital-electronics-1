@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "/home/ise/xsigmu06/07-stopwatch_v2/stopwatch/stopwatch.xst" -ofn "/home/ise/xsigmu06/07-stopwatch_v2/stopwatch/stopwatch.syr" 
+xst -intstyle ise -ifn "/home/ise/xsigmu06/07-stopwatch_v2/stopwatch/stopwatch.xst" -ofn "/home/ise/xsigmu06/07-stopwatch_v2/stopwatch/stopwatch.syr" 
