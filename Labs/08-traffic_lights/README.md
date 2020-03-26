@@ -9,13 +9,28 @@ In this laboratory exercise you will implement a finite state machine, specifica
 &nbsp;
     ![simulation_traffic_lights](../../Images/traffic_lights.png)
     &nbsp;
+    
+### Top
+
+&nbsp;
+    ![top](../../Images/traffic_sch.png)
+    &nbsp;  
+    
 &nbsp;
     ![simulation_leds](../../Images/...)
     &nbsp;
+    
+### STATES
+
+- wg- West Go
+- stop1- Stop1
+- sr- South Ready
+- sg- South Go
+- stop2- Stop2
+- wr- West Ready
 
 &nbsp;
     ![states](../../Images/states.jpg)
     &nbsp;
-&nbsp;
-    ![top](../../Images/traffic_sch.png)
-    &nbsp;    
+  
+  
