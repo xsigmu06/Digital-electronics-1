@@ -15,12 +15,12 @@ In this laboratory exercise you will implement a finite state machine, specifica
     
     
 ### STATES
-wr- West Go;
-stop1- Stop1;
-sr- South Ready;
-sg- South Go;
-stop2- Stop2;
-wr- West Ready;
+- wr- West Go
+- stop1- Stop1
+- sr- South Ready
+- sg- South Go
+- stop2- Stop2
+- wr- West Ready
 
 &nbsp;
     ![states](../../Images/states.jpg)
