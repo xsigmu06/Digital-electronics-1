@@ -1,18 +1,21 @@
-Release 14.7 - xst P.20131013 (nt64)
+Release 14.7 - xst P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to xst/projnav.tmp
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.21 secs
  
---> Parameter xsthdpdir set to xst
+--> 
+Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.21 secs
  
---> Reading design: top.prj
+--> 
+Reading design: top.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -105,13 +108,13 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "F:\projekty_de\traffic_lights\traffic_lights.vhd" into library work
+Parsing VHDL file "/home/ise/ise/08-traffic_lights/traffic_lights/traffic_lights.vhd" into library work
 Parsing entity <traffic_lights>.
 Parsing architecture <Behavioral> of entity <traffic_lights>.
-Parsing VHDL file "F:\projekty_de\traffic_lights\clock_enable.vhd" into library work
+Parsing VHDL file "/home/ise/ise/08-traffic_lights/traffic_lights/clock_enable.vhd" into library work
 Parsing entity <clock_enable>.
 Parsing architecture <Behavioral> of entity <clock_enable>.
-Parsing VHDL file "F:\projekty_de\traffic_lights\top.vhd" into library work
+Parsing VHDL file "/home/ise/ise/08-traffic_lights/traffic_lights/top.vhd" into library work
 Parsing entity <top>.
 Parsing architecture <Behavioral> of entity <top>.
 
@@ -124,26 +127,26 @@ Elaborating entity <top> (architecture <Behavioral>) from library <work>.
 Elaborating entity <clock_enable> (architecture <Behavioral>) with generics from library <work>.
 
 Elaborating entity <traffic_lights> (architecture <Behavioral>) from library <work>.
-INFO:HDLCompiler:679 - "F:\projekty_de\traffic_lights\traffic_lights.vhd" Line 93. Case statement is complete. others clause is never selected
-INFO:HDLCompiler:679 - "F:\projekty_de\traffic_lights\traffic_lights.vhd" Line 109. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "/home/ise/ise/08-traffic_lights/traffic_lights/traffic_lights.vhd" Line 91. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "/home/ise/ise/08-traffic_lights/traffic_lights/traffic_lights.vhd" Line 107. Case statement is complete. others clause is never selected
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <top>.
-    Related source file is "F:\projekty_de\traffic_lights\top.vhd".
+    Related source file is "/home/ise/ise/08-traffic_lights/traffic_lights/top.vhd".
     Summary:
 	no macro.
 Unit <top> synthesized.
 
 Synthesizing Unit <clock_enable>.
-    Related source file is "F:\projekty_de\traffic_lights\clock_enable.vhd".
+    Related source file is "/home/ise/ise/08-traffic_lights/traffic_lights/clock_enable.vhd".
         g_NPERIOD = "0000100111000100"
     Found 1-bit register for signal <clock_enable_o>.
     Found 16-bit register for signal <s_cnt>.
-    Found 16-bit adder for signal <s_cnt[15]_GND_7_o_add_1_OUT> created at line 53.
-    Found 16-bit comparator greater for signal <n0001> created at line 49
+    Found 16-bit adder for signal <s_cnt[15]_GND_7_o_add_1_OUT> created at line 54.
+    Found 16-bit comparator greater for signal <n0001> created at line 50
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  17 D-type flip-flop(s).
@@ -151,20 +154,17 @@ Synthesizing Unit <clock_enable>.
 Unit <clock_enable> synthesized.
 
 Synthesizing Unit <traffic_lights>.
-    Related source file is "F:\projekty_de\traffic_lights\traffic_lights.vhd".
+    Related source file is "/home/ise/ise/08-traffic_lights/traffic_lights/traffic_lights.vhd".
     Found 3-bit register for signal <state>.
     Found 4-bit register for signal <s_cnt>.
-INFO:Xst:1799 - State sg is never reached in FSM <state>.
-INFO:Xst:1799 - State stop2 is never reached in FSM <state>.
-INFO:Xst:1799 - State wr is never reached in FSM <state>.
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 6                                              |
-    | Transitions        | 9                                              |
+    | Transitions        | 18                                             |
     | Inputs             | 3                                              |
-    | Outputs            | 6                                              |
+    | Outputs            | 9                                              |
     | Clock              | clk_i (rising_edge)                            |
-    | Reset              | _n0041 (positive)                              |
+    | Reset              | srst_n_i_INV_6_o (positive)                    |
     | Reset type         | synchronous                                    |
     | Reset State        | wg                                             |
     | Power Up State     | wg                                             |
@@ -172,8 +172,8 @@ INFO:Xst:1799 - State wr is never reached in FSM <state>.
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
     Found 4-bit adder for signal <s_cnt[3]_GND_8_o_add_21_OUT> created at line 1241.
-    Found 4-bit comparator greater for signal <s_cnt[3]_PWR_8_o_LessThan_13_o> created at line 70
-    Found 4-bit comparator greater for signal <s_cnt[3]_GND_8_o_LessThan_21_o> created at line 86
+    Found 4-bit comparator greater for signal <s_cnt[3]_GND_8_o_LessThan_13_o> created at line 68
+    Found 4-bit comparator greater for signal <s_cnt[3]_GND_8_o_LessThan_21_o> created at line 84
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred   4 D-type flip-flop(s).
@@ -234,21 +234,23 @@ Macro Statistics
 *                         Low Level Synthesis                           *
 =========================================================================
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <TRAFFIC_LIGHTS/FSM_0> on signal <state[1:2]> with sequential encoding.
+Optimizing FSM <TRAFFIC_LIGHTS/FSM_0> on signal <state[1:3]> with user encoding.
 -------------------
  State | Encoding
 -------------------
- wg    | 00
- stop1 | 01
- sr    | 10
- sg    | unreached
- stop2 | unreached
- wr    | unreached
+ wg    | 000
+ stop1 | 001
+ sr    | 010
+ sg    | 011
+ stop2 | 100
+ wr    | 101
 -------------------
 
 Optimizing unit <top> ...
 
 Optimizing unit <traffic_lights> ...
+WARNING:Xst:1293 - FF/Latch <s_cnt_3> has a constant value of 0 in block <traffic_lights>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <s_cnt_3> has a constant value of 0 in block <traffic_lights>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <CLK_EN/s_cnt_12> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CLK_EN/s_cnt_13> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <CLK_EN/s_cnt_14> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
@@ -288,21 +290,20 @@ Top Level Output File Name         : top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 62
+# BELS                             : 63
 #      GND                         : 1
 #      INV                         : 3
 #      LUT1                        : 11
-#      LUT2                        : 12
-#      LUT5                        : 3
-#      LUT6                        : 7
+#      LUT2                        : 11
+#      LUT3                        : 4
+#      LUT6                        : 9
 #      MUXCY                       : 11
-#      MUXF7                       : 1
 #      VCC                         : 1
 #      XORCY                       : 12
 # FlipFlops/Latches                : 19
-#      FD                          : 7
-#      FDR                         : 8
-#      FDRE                        : 4
+#      FD                          : 6
+#      FDR                         : 10
+#      FDRE                        : 3
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 7
@@ -317,14 +318,14 @@ Selected Device : 7a100tcsg324-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:              19  out of  126800     0%  
- Number of Slice LUTs:                   36  out of  63400     0%  
-    Number used as Logic:                36  out of  63400     0%  
+ Number of Slice LUTs:                   38  out of  63400     0%  
+    Number used as Logic:                38  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     36
-   Number with an unused Flip Flop:      17  out of     36    47%  
-   Number with an unused LUT:             0  out of     36     0%  
-   Number of fully used LUT-FF pairs:    19  out of     36    52%  
+ Number of LUT Flip Flop pairs used:     38
+   Number with an unused Flip Flop:      19  out of     38    50%  
+   Number with an unused LUT:             0  out of     38     0%  
+   Number of fully used LUT-FF pairs:    19  out of     38    50%  
    Number of unique control sets:         4
 
 IO Utilization: 
@@ -367,8 +368,8 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 2.231ns (Maximum Frequency: 448.290MHz)
-   Minimum input arrival time before clock: 1.480ns
-   Maximum output required time after clock: 1.154ns
+   Minimum input arrival time before clock: 1.474ns
+   Maximum output required time after clock: 1.295ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -378,7 +379,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_i'
   Clock period: 2.231ns (frequency: 448.290MHz)
-  Total number of paths / destination ports: 285 / 35
+  Total number of paths / destination ports: 285 / 28
 -------------------------------------------------------------------------
 Delay:               2.231ns (Levels of Logic = 2)
   Source:            CLK_EN/s_cnt_5 (FF)
@@ -402,7 +403,7 @@ Delay:               2.231ns (Levels of Logic = 2)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_i'
   Total number of paths / destination ports: 19 / 19
 -------------------------------------------------------------------------
-Offset:              1.480ns (Levels of Logic = 2)
+Offset:              1.474ns (Levels of Logic = 2)
   Source:            BTN0 (PAD)
   Destination:       CLK_EN/s_cnt_6 (FF)
   Destination Clock: clk_i rising
@@ -411,32 +412,32 @@ Offset:              1.480ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             3   0.001   0.703  BTN0_IBUF (BTN0_IBUF)
+     IBUF:I->O             2   0.001   0.697  BTN0_IBUF (BTN0_IBUF)
      LUT6:I0->O           12   0.097   0.330  CLK_EN/Mcount_s_cnt_val1 (CLK_EN/Mcount_s_cnt_val)
      FDR:R                     0.349          CLK_EN/s_cnt_9
     ----------------------------------------
-    Total                      1.480ns (0.447ns logic, 1.033ns route)
-                                       (30.2% logic, 69.8% route)
+    Total                      1.474ns (0.447ns logic, 1.027ns route)
+                                       (30.3% logic, 69.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_i'
-  Total number of paths / destination ports: 5 / 4
+  Total number of paths / destination ports: 13 / 6
 -------------------------------------------------------------------------
-Offset:              1.154ns (Levels of Logic = 2)
-  Source:            TRAFFIC_LIGHTS/state_FSM_FFd1 (FF)
-  Destination:       LD5_CPLD (PAD)
+Offset:              1.295ns (Levels of Logic = 2)
+  Source:            TRAFFIC_LIGHTS/state_FSM_FFd3 (FF)
+  Destination:       LDW_r (PAD)
   Source Clock:      clk_i rising
 
-  Data Path: TRAFFIC_LIGHTS/state_FSM_FFd1 to LD5_CPLD
+  Data Path: TRAFFIC_LIGHTS/state_FSM_FFd3 to LDW_r
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              9   0.361   0.416  TRAFFIC_LIGHTS/state_FSM_FFd1 (TRAFFIC_LIGHTS/state_FSM_FFd1)
-     LUT2:I0->O            1   0.097   0.279  TRAFFIC_LIGHTS/state_lights<5>1 (LD5_CPLD_OBUF)
-     OBUF:I->O                 0.000          LD5_CPLD_OBUF (LD5_CPLD)
+     FDR:C->Q             11   0.361   0.558  TRAFFIC_LIGHTS/state_FSM_FFd3 (TRAFFIC_LIGHTS/state_FSM_FFd3)
+     LUT3:I0->O            1   0.097   0.279  TRAFFIC_LIGHTS/state_lights<5>1 (LDW_r_OBUF)
+     OBUF:I->O                 0.000          LDW_r_OBUF (LDW_r)
     ----------------------------------------
-    Total                      1.154ns (0.458ns logic, 0.696ns route)
-                                       (39.7% logic, 60.3% route)
+    Total                      1.295ns (0.458ns logic, 0.837ns route)
+                                       (35.4% logic, 64.6% route)
 
 =========================================================================
 
@@ -454,14 +455,15 @@ clk_i          |    2.231|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 10.22 secs
+Total REAL time to Xst completion: 39.00 secs
+Total CPU time to Xst completion: 35.77 secs
  
 --> 
 
-Total memory usage is 4624664 kilobytes
+
+Total memory usage is 604900 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    4 (   0 filtered)
-Number of infos    :    3 (   0 filtered)
+Number of warnings :    6 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
 

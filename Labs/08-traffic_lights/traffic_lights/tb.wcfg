@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/ise/ise/08-traffic_lights/traffic_lights/top_tb00_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="top_tb00" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="12" />
+   <wvobject fp_name="/top_tb00/clk_i" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_i</obj_property>
+      <obj_property name="ObjectShortName">clk_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb00/btn0" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">btn0</obj_property>
+      <obj_property name="ObjectShortName">btn0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb00/ld0_cpld" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ld0_cpld</obj_property>
+      <obj_property name="ObjectShortName">ld0_cpld</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb00/ld1_cpld" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ld1_cpld</obj_property>
+      <obj_property name="ObjectShortName">ld1_cpld</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb00/ld5_cpld" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ld5_cpld</obj_property>
+      <obj_property name="ObjectShortName">ld5_cpld</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb00/ld8_cpld" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ld8_cpld</obj_property>
+      <obj_property name="ObjectShortName">ld8_cpld</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb00/ld9_cpld" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ld9_cpld</obj_property>
+      <obj_property name="ObjectShortName">ld9_cpld</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb00/ld12_cpld" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ld12_cpld</obj_property>
+      <obj_property name="ObjectShortName">ld12_cpld</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb00/clk_i_period" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_i_period</obj_property>
+      <obj_property name="ObjectShortName">clk_i_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb00/uut/lights_o" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">lights_o[5:0]</obj_property>
+      <obj_property name="ObjectShortName">lights_o[5:0]</obj_property>
+      <wvobject fp_name="/top_tb00/uut/lights_o[5]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[5]</obj_property>
+         <obj_property name="ObjectShortName">lights_o[5]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff0000</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb00/uut/lights_o[4]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[4]</obj_property>
+         <obj_property name="ObjectShortName">lights_o[4]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ffa500</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb00/uut/lights_o[3]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">lights_o[3]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb00/uut/lights_o[2]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">lights_o[2]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff0000</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb00/uut/lights_o[1]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">lights_o[1]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ffa500</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb00/uut/lights_o[0]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">lights_o[0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/top_tb00/uut/s_en" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_en</obj_property>
+      <obj_property name="ObjectShortName">s_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb00/uut/TRAFFIC_LIGHTS/s_cnt" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_cnt[3:0]</obj_property>
+      <obj_property name="ObjectShortName">s_cnt[3:0]</obj_property>
+   </wvobject>
+</wave_config>

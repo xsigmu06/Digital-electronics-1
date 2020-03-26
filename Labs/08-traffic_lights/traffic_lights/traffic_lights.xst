@@ -1,5 +1,5 @@
-set -tmpdir "F:/projekty_de/traffic_lights/xst/projnav.tmp"
-set -xsthdpdir "F:/projekty_de/traffic_lights/xst"
+set -tmpdir "/home/ise/ise/08-traffic_lights/traffic_lights/xst/projnav.tmp"
+set -xsthdpdir "/home/ise/ise/08-traffic_lights/traffic_lights/xst"
 run -compileonly yes
 -p xc7a100t-3-csg324
 -top traffic_lights

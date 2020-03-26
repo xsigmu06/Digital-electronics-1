@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer:
 --
--- Create Date:   23:00:52 03/25/2020
+-- Create Date:   09:38:13 03/26/2020
 -- Design Name:   
--- Module Name:   F:/projekty_de/traffic_lights/top_tb00.vhd
+-- Module Name:   /home/ise/ise/08-traffic_lights/traffic_lights/top_tb00.vhd
 -- Project Name:  traffic_lights
 -- Target Device:  
 -- Tool versions:  
@@ -96,20 +96,15 @@ BEGIN
    stim_proc: process
    begin		
       -- hold reset state for 100 ns.
-           wait for 100 ns;
-		
+      wait for 100 ns;	
+		-- insert stimulus here 
 		BTN0 <= '1';
-		
-		wait for clk_i_period*75;
-		
+      wait for clk_i_period*1000;
 		BTN0 <= '0';
-		
 		wait for clk_i_period*10;
-		
 		BTN0 <= '1';
-
-      -- insert stimulus here 
-
+		wait for clk_i_period*10;
+      
       wait;
    end process;
 

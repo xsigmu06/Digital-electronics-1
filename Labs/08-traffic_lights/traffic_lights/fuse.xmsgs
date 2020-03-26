@@ -5,5 +5,26 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="error" file="HDLCompiler" num="1156" delta="unknown" >"/home/ise/ise/08-traffic_lights/traffic_lights/top_tb00.vhd" Line 46: Formal port &lt;<arg fmt="%s" index="1">LD0_CPLD</arg>&gt; does not exist in entity &lt;<arg fmt="%s" index="2">top</arg>&gt;.  Please compare the definition of block &lt;<arg fmt="%s" index="3">top</arg>&gt; to its component declaration and its instantion to detect the mismatch.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="1156" delta="unknown" >"/home/ise/ise/08-traffic_lights/traffic_lights/top_tb00.vhd" Line 47: Formal port &lt;<arg fmt="%s" index="1">LD1_CPLD</arg>&gt; does not exist in entity &lt;<arg fmt="%s" index="2">top</arg>&gt;.  Please compare the definition of block &lt;<arg fmt="%s" index="3">top</arg>&gt; to its component declaration and its instantion to detect the mismatch.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="1156" delta="unknown" >"/home/ise/ise/08-traffic_lights/traffic_lights/top_tb00.vhd" Line 48: Formal port &lt;<arg fmt="%s" index="1">LD5_CPLD</arg>&gt; does not exist in entity &lt;<arg fmt="%s" index="2">top</arg>&gt;.  Please compare the definition of block &lt;<arg fmt="%s" index="3">top</arg>&gt; to its component declaration and its instantion to detect the mismatch.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="1156" delta="unknown" >"/home/ise/ise/08-traffic_lights/traffic_lights/top_tb00.vhd" Line 49: Formal port &lt;<arg fmt="%s" index="1">LD8_CPLD</arg>&gt; does not exist in entity &lt;<arg fmt="%s" index="2">top</arg>&gt;.  Please compare the definition of block &lt;<arg fmt="%s" index="3">top</arg>&gt; to its component declaration and its instantion to detect the mismatch.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="1156" delta="unknown" >"/home/ise/ise/08-traffic_lights/traffic_lights/top_tb00.vhd" Line 50: Formal port &lt;<arg fmt="%s" index="1">LD9_CPLD</arg>&gt; does not exist in entity &lt;<arg fmt="%s" index="2">top</arg>&gt;.  Please compare the definition of block &lt;<arg fmt="%s" index="3">top</arg>&gt; to its component declaration and its instantion to detect the mismatch.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="1156" delta="unknown" >"/home/ise/ise/08-traffic_lights/traffic_lights/top_tb00.vhd" Line 51: Formal port &lt;<arg fmt="%s" index="1">LD12_CPLD</arg>&gt; does not exist in entity &lt;<arg fmt="%s" index="2">top</arg>&gt;.  Please compare the definition of block &lt;<arg fmt="%s" index="3">top</arg>&gt; to its component declaration and its instantion to detect the mismatch.
+</msg>
+
+<msg type="error" file="Simulator" num="777" delta="unknown" >Static elaboration of top level VHDL design unit <arg fmt="%s" index="1">top_tb00</arg> in library <arg fmt="%s" index="2">work</arg> failed
+</msg>
+
 </messages>
 

@@ -2,15 +2,15 @@
 -- Company: 
 -- Engineer:
 --
--- Create Date:   16:15:52 03/25/2020
+-- Create Date:   09:33:56 03/26/2020
 -- Design Name:   
--- Module Name:   F:/projekty_de/traffic_lights/traffic_lights_tb00.vhd
+-- Module Name:   /home/ise/ise/08-traffic_lights/traffic_lights/traffic_lights_tb00.vhd
 -- Project Name:  traffic_lights
 -- Target Device:  
 -- Tool versions:  
 -- Description:   
 -- 
--- VHDL Test Bench Created by ISE for module: traffic
+-- VHDL Test Bench Created by ISE for module: traffic_lights
 -- 
 -- Dependencies:
 -- 
@@ -27,7 +27,6 @@
 --------------------------------------------------------------------------------
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
-use ieee.numeric_std.all;
  
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -40,11 +39,12 @@ ARCHITECTURE behavior OF traffic_lights_tb00 IS
  
     -- Component Declaration for the Unit Under Test (UUT)
  
-    COMPONENT traffic
+    COMPONENT traffic_lights
     PORT(
          clk_i : IN  std_logic;
          srst_n_i : IN  std_logic;
-         lights : OUT  unsigned(5 downto 0)
+         c_en : IN  std_logic;
+         lights : OUT  std_logic_vector(5 downto 0)
         );
     END COMPONENT;
     
@@ -52,9 +52,10 @@ ARCHITECTURE behavior OF traffic_lights_tb00 IS
    --Inputs
    signal clk_i : std_logic := '0';
    signal srst_n_i : std_logic := '0';
+   signal c_en : std_logic := '0';
 
  	--Outputs
-   signal lights : unsigned(5 downto 0);
+   signal lights : std_logic_vector(5 downto 0);
 
    -- Clock period definitions
    constant clk_i_period : time := 10 ns;
@@ -62,9 +63,10 @@ ARCHITECTURE behavior OF traffic_lights_tb00 IS
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
-   uut: traffic PORT MAP (
+   uut: traffic_lights PORT MAP (
           clk_i => clk_i,
           srst_n_i => srst_n_i,
+          c_en => c_en,
           lights => lights
         );
 
@@ -82,21 +84,15 @@ BEGIN
    stim_proc: process
    begin		
       -- hold reset state for 100 ns.
-		
-      wait for 100 ns;
-		
-		BTN0 <= '1';
-		
-		wait for clk_i_period*75;
-		
-		BTN0 <= '0';
-		
-		wait for clk_i_period*10;
-		
-		BTN0 <= '1';
-		
+      wait for 100 ns;	
 
       -- insert stimulus here 
+		
+		srst_n_i <= '1';
+		wait for clk_i_period*10;
+		srst_n_i <= '0';
+		wait for clk_i_period*10;
+		srst_n_i <= '1';
 
       wait;
    end process;
