@@ -7,12 +7,12 @@ In this laboratory exercise you will implement a finite state machine, specifica
 ## Top
 
 &nbsp;
-    ![top](../../Images/traffic_sch.png)
-    &nbsp;  
-    
-&nbsp;
     ![simulation_leds](../../Images/traffic_seconds.png)
     &nbsp;
+    
+&nbsp;
+    ![top](../../Images/traffic_sch.png)
+    &nbsp;  
     
 ### STATES
 
