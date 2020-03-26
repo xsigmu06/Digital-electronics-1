@@ -17,7 +17,7 @@ In this laboratory exercise you will implement a finite state machine, specifica
     &nbsp;  
     
 &nbsp;
-    ![simulation_leds](../../Images/...)
+    ![simulation_leds](../../Images/traffic_seconds.png)
     &nbsp;
     
 ### STATES
