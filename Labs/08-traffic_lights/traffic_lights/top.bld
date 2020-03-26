@@ -1,0 +1,248 @@
+Release 14.7 ngdbuild P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: F:\xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -nt timestamp -uc
+C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder/bin
+ary_adder/cpld_board.ucf -p xc7a100t-csg324-3 top.ngc top.ngd
+
+Reading NGO file "F:/projekty_de/traffic_lights/top.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file
+"C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder/bi
+nary_adder/cpld_board.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+ERROR:ConstraintSystem:59 - Constraint <NET SW11_CPLD           LOC = P4;>
+   [C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder
+   /binary_adder/cpld_board.ucf(34)]: NET "SW11_CPLD" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET SW11_CPLD           LOC = P4;>
+   [C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder
+   /binary_adder/cpld_board.ucf(34)]' could not be found and so the Locate
+   constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET SW10_CPLD           LOC = P5;>
+   [C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder
+   /binary_adder/cpld_board.ucf(35)]: NET "SW10_CPLD" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET SW10_CPLD           LOC = P5;>
+   [C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder
+   /binary_adder/cpld_board.ucf(35)]' could not be found and so the Locate
+   constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET SW9_CPLD            LOC = P2;>
+   [C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder
+   /binary_adder/cpld_board.ucf(36)]: NET "SW9_CPLD" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET SW9_CPLD            LOC = P2;>
+   [C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder
+   /binary_adder/cpld_board.ucf(36)]' could not be found and so the Locate
+   constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET SW8_CPLD            LOC = P3;>
+   [C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder
+   /binary_adder/cpld_board.ucf(37)]: NET "SW8_CPLD" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET SW8_CPLD            LOC = P3;>
+   [C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder
+   /binary_adder/cpld_board.ucf(37)]' could not be found and so the Locate
+   constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET SW3_CPLD            LOC = P135;>
+   [C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder
+   /binary_adder/cpld_board.ucf(42)]: NET "SW3_CPLD" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET SW3_CPLD            LOC = P135;>
+   [C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder
+   /binary_adder/cpld_board.ucf(42)]' could not be found and so the Locate
+   constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET SW2_CPLD            LOC = P136;>
+   [C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder
+   /binary_adder/cpld_board.ucf(43)]: NET "SW2_CPLD" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET SW2_CPLD            LOC = P136;>
+   [C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder
+   /binary_adder/cpld_board.ucf(43)]' could not be found and so the Locate
+   constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET SW1_CPLD            LOC = P133;>
+   [C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder
+   /binary_adder/cpld_board.ucf(44)]: NET "SW1_CPLD" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET SW1_CPLD            LOC = P133;>
+   [C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder
+   /binary_adder/cpld_board.ucf(44)]' could not be found and so the Locate
+   constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET SW0_CPLD            LOC = P134;>
+   [C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder
+   /binary_adder/cpld_board.ucf(45)]: NET "SW0_CPLD" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET SW0_CPLD            LOC = P134;>
+   [C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder
+   /binary_adder/cpld_board.ucf(45)]' could not be found and so the Locate
+   constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET LD11_CPLD           LOC = P114;>
+   [C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder
+   /binary_adder/cpld_board.ucf(60)]: NET "LD11_CPLD" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET LD11_CPLD           LOC = P114;>
+   [C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder
+   /binary_adder/cpld_board.ucf(60)]' could not be found and so the Locate
+   constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET LD10_CPLD           LOC = P115;>
+   [C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder
+   /binary_adder/cpld_board.ucf(61)]: NET "LD10_CPLD" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET LD10_CPLD           LOC = P115;>
+   [C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder
+   /binary_adder/cpld_board.ucf(61)]' could not be found and so the Locate
+   constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET LD9_CPLD            LOC = P112;>
+   [C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder
+   /binary_adder/cpld_board.ucf(62)]: NET "LD9_CPLD" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET LD9_CPLD            LOC = P112;>
+   [C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder
+   /binary_adder/cpld_board.ucf(62)]' could not be found and so the Locate
+   constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET LD8_CPLD            LOC = P113;>
+   [C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder
+   /binary_adder/cpld_board.ucf(63)]: NET "LD8_CPLD" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET LD8_CPLD            LOC = P113;>
+   [C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder
+   /binary_adder/cpld_board.ucf(63)]' could not be found and so the Locate
+   constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET LD3_CPLD            LOC = P98;>
+   [C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder
+   /binary_adder/cpld_board.ucf(68)]: NET "LD3_CPLD" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET LD3_CPLD            LOC = P98;>
+   [C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder
+   /binary_adder/cpld_board.ucf(68)]' could not be found and so the Locate
+   constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET LD2_CPLD            LOC = P100;>
+   [C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder
+   /binary_adder/cpld_board.ucf(69)]: NET "LD2_CPLD" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET LD2_CPLD            LOC = P100;>
+   [C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder
+   /binary_adder/cpld_board.ucf(69)]' could not be found and so the Locate
+   constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET LD1_CPLD            LOC = P96;>
+   [C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder
+   /binary_adder/cpld_board.ucf(70)]: NET "LD1_CPLD" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET LD1_CPLD            LOC = P96;>
+   [C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder
+   /binary_adder/cpld_board.ucf(70)]' could not be found and so the Locate
+   constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET LD0_CPLD            LOC = P97;>
+   [C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder
+   /binary_adder/cpld_board.ucf(71)]: NET "LD0_CPLD" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET LD0_CPLD            LOC = P97;>
+   [C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder
+   /binary_adder/cpld_board.ucf(71)]' could not be found and so the Locate
+   constraint will be removed.
+
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:    16
+  Number of warnings:  16
+
+Total memory usage is 4470660 kilobytes
+
+Total REAL time to NGDBUILD completion:  10 sec
+Total CPU time to NGDBUILD completion:   7 sec
+
+One or more errors were found during NGDBUILD.  No NGD file will be written.
+
+Writing NGDBUILD log file "top.bld"...

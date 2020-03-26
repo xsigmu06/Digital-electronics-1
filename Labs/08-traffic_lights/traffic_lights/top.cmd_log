@@ -40,3 +40,5 @@ xst -intstyle ise -ifn "/home/ise/ise/08-traffic_lights/traffic_lights/top.xst" 
 xst -intstyle ise -ifn "/home/ise/ise/08-traffic_lights/traffic_lights/top.xst" -ofn "/home/ise/ise/08-traffic_lights/traffic_lights/top.syr" 
 xst -intstyle ise -ifn "/home/ise/ise/08-traffic_lights/traffic_lights/top.xst" -ofn "/home/ise/ise/08-traffic_lights/traffic_lights/top.syr" 
 xst -intstyle ise -ifn "/home/ise/ise/08-traffic_lights/traffic_lights/top.xst" -ofn "/home/ise/ise/08-traffic_lights/traffic_lights/top.syr" 
+xst -intstyle ise -ifn "F:/projekty_de/traffic_lights/top.xst" -ofn "F:/projekty_de/traffic_lights/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/04-adder/binary_adder/cpld_board.ucf -p xc7a100t-csg324-3 top.ngc top.ngd  

@@ -22,9 +22,14 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="traffic_lights.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="top.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="top.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="top.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="top.ngc"/>
@@ -35,6 +40,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="top.xst"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="top_envsettings.html"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="top_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="top_ngdbuild.xrpt"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="top_summary.html"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="top_tb00_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="top_tb00_isim_beh.exe"/>
@@ -67,6 +73,7 @@
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="traffic_xst.xrpt"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
@@ -75,13 +82,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1585222059" xil_pn:in_ck="704048048228688068" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1585222059">
+    <transform xil_pn:end_ts="1585229208" xil_pn:in_ck="704048048228688068" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1585229208">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="clock_enable.vhd"/>
       <outfile xil_pn:name="top.vhd"/>
       <outfile xil_pn:name="top_tb00.vhd"/>
@@ -100,34 +103,34 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1585222059" xil_pn:in_ck="704048048228688068" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1585222059">
+    <transform xil_pn:end_ts="1585229208" xil_pn:in_ck="704048048228688068" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1585229208">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="clock_enable.vhd"/>
       <outfile xil_pn:name="top.vhd"/>
       <outfile xil_pn:name="top_tb00.vhd"/>
       <outfile xil_pn:name="traffic_lights.vhd"/>
       <outfile xil_pn:name="traffic_lights_tb00.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1585222064" xil_pn:in_ck="704048048228688068" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-2510907169180952970" xil_pn:start_ts="1585222059">
-      <status xil_pn:value="FailedRun"/>
+    <transform xil_pn:end_ts="1585229214" xil_pn:in_ck="704048048228688068" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-2510907169180952970" xil_pn:start_ts="1585229208">
+      <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="top_tb00_beh.prj"/>
+      <outfile xil_pn:name="top_tb00_isim_beh.exe"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1585218728" xil_pn:in_ck="-6618896454515821306" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-8436527092359842439" xil_pn:start_ts="1585218727">
-      <status xil_pn:value="AbortedRun"/>
+    <transform xil_pn:end_ts="1585229489" xil_pn:in_ck="-6618896454515821306" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-8436527092359842439" xil_pn:start_ts="1585229489">
+      <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForced"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="top_tb00_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1585216511" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1585216511">
@@ -158,13 +161,11 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1585222049" xil_pn:in_ck="-612324209751268386" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="9141562555471040227" xil_pn:start_ts="1585222003">
+    <transform xil_pn:end_ts="1585229182" xil_pn:in_ck="-612324209751268386" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="9141562555471040227" xil_pn:start_ts="1585229161">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="top.lso"/>
@@ -180,13 +181,18 @@
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1585148369" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-1194749123689935199" xil_pn:start_ts="1585148369">
+    <transform xil_pn:end_ts="1585229182" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="6693835875156060939" xil_pn:start_ts="1585229182">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
+    </transform>
+    <transform xil_pn:end_ts="1585229197" xil_pn:in_ck="-8710039273432265698" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="6376359273530028631" xil_pn:start_ts="1585229182">
+      <status xil_pn:value="FailedRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="top.bld"/>
+      <outfile xil_pn:name="top_ngdbuild.xrpt"/>
     </transform>
   </transforms>
 

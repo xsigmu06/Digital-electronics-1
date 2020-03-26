@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-03-26T11:30:05</DateModified>
+  <DateModified>2020-03-26T13:45:45</DateModified>
   <ModuleName>top</ModuleName>
   <SummaryTimeStamp>2020-03-26T11:27:30</SummaryTimeStamp>
-  <SavedFilePath>/home/ise/ise/08-traffic_lights/traffic_lights/iseconfig/top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/ise/ise/08-traffic_lights/traffic_lights/</ImplementationReportsDirectory>
+  <SavedFilePath>F:/projekty_de/traffic_lights/iseconfig/top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>F:/projekty_de/traffic_lights\</ImplementationReportsDirectory>
   <DateInitialized>2020-03-26T09:37:52</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

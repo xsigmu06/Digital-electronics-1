@@ -27,8 +27,8 @@ architecture Behavioral of traffic_lights is
 	signal state: state_type;
 	signal s_cnt: unsigned(3 downto 0) := "0000";
 	
-	constant SEC5: unsigned(3 downto 0) := "0101";  -- s_cnt to 5
-	constant SEC1: unsigned(3 downto 0) := "0001";  -- s_cnt to 1
+	constant SEC5: unsigned(3 downto 0) := "0100";  -- s_cnt to 5
+	constant SEC1: unsigned(3 downto 0) := "0000";  -- s_cnt to 1
 
 	begin
 

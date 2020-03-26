@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "secureip" -o "/home/ise/ise/08-traffic_lights/traffic_lights/top_tb00_isim_beh.exe" -prj "/home/ise/ise/08-traffic_lights/traffic_lights/top_tb00_beh.prj" "work.top_tb00" 
+-intstyle "ise" -incremental -lib "secureip" -o "F:/projekty_de/traffic_lights/top_tb00_isim_beh.exe" -prj "F:/projekty_de/traffic_lights/top_tb00_beh.prj" "work.top_tb00" 

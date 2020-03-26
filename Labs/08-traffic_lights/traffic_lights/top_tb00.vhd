@@ -43,12 +43,13 @@ ARCHITECTURE behavior OF top_tb00 IS
     PORT(
          clk_i : IN  std_logic;
          BTN0 : IN  std_logic;
-         LD0_CPLD : OUT  std_logic;
-         LD1_CPLD : OUT  std_logic;
-         LD5_CPLD : OUT  std_logic;
-         LD8_CPLD : OUT  std_logic;
-         LD9_CPLD : OUT  std_logic;
-         LD12_CPLD : OUT  std_logic
+			LDW_r, LDW_o, LDW_g, LDS_r, LDS_o, LDS_g : OUT std_logic
+--         LD0_CPLD : OUT  std_logic;
+--         LD1_CPLD : OUT  std_logic;
+--         LD5_CPLD : OUT  std_logic;
+--         LD8_CPLD : OUT  std_logic;
+--         LD9_CPLD : OUT  std_logic;
+--         LD12_CPLD : OUT  std_logic
         );
     END COMPONENT;
     
@@ -58,15 +59,16 @@ ARCHITECTURE behavior OF top_tb00 IS
    signal BTN0 : std_logic := '0';
 
  	--Outputs
-   signal LD0_CPLD : std_logic;
-   signal LD1_CPLD : std_logic;
-   signal LD5_CPLD : std_logic;
-   signal LD8_CPLD : std_logic;
-   signal LD9_CPLD : std_logic;
-   signal LD12_CPLD : std_logic;
+	signal LDW_r, LDW_o, LDW_g, LDS_r, LDS_o, LDS_g :std_logic;
+--   signal LD0_CPLD : std_logic;
+--   signal LD1_CPLD : std_logic;
+--   signal LD5_CPLD : std_logic;
+--   signal LD8_CPLD : std_logic;
+--   signal LD9_CPLD : std_logic;
+--   signal LD12_CPLD : std_logic;
 
    -- Clock period definitions
-   constant clk_i_period : time := 10 ns;
+   constant clk_i_period : time := 100 us;
  
 BEGIN
  
@@ -74,12 +76,19 @@ BEGIN
    uut: top PORT MAP (
           clk_i => clk_i,
           BTN0 => BTN0,
-          LD0_CPLD => LD0_CPLD,
-          LD1_CPLD => LD1_CPLD,
-          LD5_CPLD => LD5_CPLD,
-          LD8_CPLD => LD8_CPLD,
-          LD9_CPLD => LD9_CPLD,
-          LD12_CPLD => LD12_CPLD
+			 LDW_r => LDW_r, 
+			 LDW_o =>LDW_o, 
+			 LDW_g => LDW_g, 
+			 LDS_r => LDS_r, 
+			 LDS_o =>LDS_o, 
+			 LDS_g =>  LDS_g
+			 
+--          LD0_CPLD => LD0_CPLD,
+--          LD1_CPLD => LD1_CPLD,
+--          LD5_CPLD => LD5_CPLD,
+--          LD8_CPLD => LD8_CPLD,
+--          LD9_CPLD => LD9_CPLD,
+--          LD12_CPLD => LD12_CPLD
         );
 
    -- Clock process definitions
@@ -99,11 +108,12 @@ BEGIN
       wait for 100 ns;	
 		-- insert stimulus here 
 		BTN0 <= '1';
-      wait for clk_i_period*1000;
+      wait for 12000 ms;
 		BTN0 <= '0';
-		wait for clk_i_period*10;
+		wait for 1000 ms;
+		--wait for clk_i_period*1000000000;
 		BTN0 <= '1';
-		wait for clk_i_period*10;
+		wait for 12000 ms;
       
       wait;
    end process;
