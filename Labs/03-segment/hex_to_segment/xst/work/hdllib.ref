@@ -1,4 +1,0 @@
-EN hex_to_7seg NULL /home/lab661/Documents/xsigmu06/Digital-electronics-1/Labs/03-segment/hex_to_segment/hex_to_7seg.vhd sub00/vhpl00 1582187993
-EN top NULL /home/lab661/Documents/xsigmu06/Digital-electronics-1/Labs/03-segment/hex_to_segment/top.vhd sub00/vhpl02 1582187995
-AR hex_to_7seg behavioral /home/lab661/Documents/xsigmu06/Digital-electronics-1/Labs/03-segment/hex_to_segment/hex_to_7seg.vhd sub00/vhpl01 1582187994
-AR top behavioral /home/lab661/Documents/xsigmu06/Digital-electronics-1/Labs/03-segment/hex_to_segment/top.vhd sub00/vhpl03 1582187996

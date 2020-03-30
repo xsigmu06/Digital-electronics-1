@@ -8,7 +8,7 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/lab661/Documents/xsigmu06/Digital-electronics-1/Labs/02-ise/comparator/top.vhd&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/ise/Labs/02-ise/comparator/top.vhd&quot; into library work</arg>
 </msg>
 
 </messages>

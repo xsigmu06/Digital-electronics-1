@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-02-13T10:15:27</DateModified>
+  <DateModified>2020-03-30T19:09:50</DateModified>
   <ModuleName>top</ModuleName>
   <SummaryTimeStamp>2020-02-13T09:33:49</SummaryTimeStamp>
-  <SavedFilePath>/home/lab661/Documents/xsigmu06/Digital-electronics-1/Labs/02-ise/comparator/iseconfig/top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/lab661/Documents/xsigmu06/Digital-electronics-1/Labs/02-ise/comparator/</ImplementationReportsDirectory>
+  <SavedFilePath>/home/ise/ise/Labs/02-ise/comparator/iseconfig/top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/ise/ise/Labs/02-ise/comparator/</ImplementationReportsDirectory>
   <DateInitialized>2020-02-13T08:11:48</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

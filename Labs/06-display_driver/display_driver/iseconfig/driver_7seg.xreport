@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-03-12T11:21:53</DateModified>
+  <DateModified>2020-03-30T19:07:54</DateModified>
   <ModuleName>driver_7seg</ModuleName>
   <SummaryTimeStamp>2020-03-12T11:13:58</SummaryTimeStamp>
-  <SavedFilePath>/home/ise/xsigmu06/06-display_driver/display_driver/iseconfig/driver_7seg.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/ise/xsigmu06/06-display_driver/display_driver</ImplementationReportsDirectory>
+  <SavedFilePath>/home/ise/ise/Labs/06-display_driver/display_driver/iseconfig/driver_7seg.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/ise/ise/Labs/06-display_driver/display_driver/</ImplementationReportsDirectory>
   <DateInitialized>2020-03-12T10:55:00</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

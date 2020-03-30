@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer:
 --
--- Create Date:   23:16:36 03/19/2020
+-- Create Date:   10:10:17 03/25/2020
 -- Design Name:   
--- Module Name:   /home/ise/Documents/Digital-electronics-1/Labs/06-display_driver/stopwatch/stopwatch_tb.vhd
+-- Module Name:   /home/ise/xsigmu06/07-stopwatch_v2/stopwatch/stopwatch_tb00.vhd
 -- Project Name:  stopwatch
 -- Target Device:  
 -- Tool versions:  
@@ -32,10 +32,10 @@ USE ieee.std_logic_1164.ALL;
 -- arithmetic functions with Signed or Unsigned values
 --USE ieee.numeric_std.ALL;
  
-ENTITY stopwatch_tb IS
-END stopwatch_tb;
+ENTITY stopwatch_tb00 IS
+END stopwatch_tb00;
  
-ARCHITECTURE behavior OF stopwatch_tb IS 
+ARCHITECTURE behavior OF stopwatch_tb00 IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
  
@@ -55,7 +55,6 @@ ARCHITECTURE behavior OF stopwatch_tb IS
 
    --Inputs
    signal clk_i : std_logic := '0';
-
    signal srst_n_i : std_logic := '0';
    signal ce_100Hz_i : std_logic := '0';
    signal cnt_en_i : std_logic := '0';
@@ -67,8 +66,8 @@ ARCHITECTURE behavior OF stopwatch_tb IS
    signal hth_l_o : std_logic_vector(3 downto 0);
 
    -- Clock period definitions
-   constant clk_i_period : time := 100 us;
- constant ce_100Hz_i_period : time := 10 ms;
+   constant clk_i_period : time := 10 ns;
+ 
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
@@ -92,36 +91,27 @@ BEGIN
 		wait for clk_i_period/2;
    end process;
  
-  ce_100Hz_i_process :process
-   begin
-		ce_100Hz_i <= '0';
-		wait for ce_100Hz_i_period/2;
-		ce_100Hz_i <= '1';
-		wait for clk_i_period;
-		ce_100Hz_i <= '0';
-		wait for ce_100Hz_i_period/2;
-   end process;
-	
+
    -- Stimulus process
    stim_proc: process
    begin		
       -- hold reset state for 100 ns.
-		srst_n_i<='0';
-		cnt_en_i<='1';
       wait for 100 ns;	
+		srst_n_i <= '1';
+		ce_100Hz_i <= '1';
+		cnt_en_i <= '1';
 		
-      wait for 1 ms;
-		srst_n_i<='1';
-		cnt_en_i<='1';
-		wait for 40 ms ;
-		cnt_en_i<='0';
-		wait for 40 ms;
-		cnt_en_i<='1';
-		wait for 150 ms;
-		srst_n_i<='0';
-		wait for 40 ms;
-		srst_n_i<='1';
-      -- insert stimulus here 
+      wait for clk_i_period*20;
+		ce_100Hz_i <= '0';
+		
+		wait for clk_i_period*2;
+		ce_100Hz_i <= '1';
+		
+		wait for clk_i_period*2;
+		srst_n_i <= '0';
+		
+		wait for clk_i_period*2;
+		srst_n_i <= '1';	
 
       wait;
    end process;

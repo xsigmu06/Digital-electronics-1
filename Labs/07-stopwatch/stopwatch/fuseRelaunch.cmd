@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "/home/ise/xsigmu06/07/stopwatch/stopwatch_tb_isim_beh.exe" -prj "/home/ise/xsigmu06/07/stopwatch/stopwatch_tb_beh.prj" "work.stopwatch_tb" 
+-intstyle "ise" -incremental -o "/home/ise/xsigmu06/07-stopwatch_v2/stopwatch/stopwatch_tb00_isim_beh.exe" -prj "/home/ise/xsigmu06/07-stopwatch_v2/stopwatch/stopwatch_tb00_beh.prj" "work.stopwatch_tb00" 

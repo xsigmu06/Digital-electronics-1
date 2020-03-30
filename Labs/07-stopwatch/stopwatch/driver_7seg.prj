@@ -1,4 +1,0 @@
-vhdl work "stopwatch_counter.vhd"
-vhdl work "../../06-display_driver/display_driver/hex_to_7seg.vhd"
-vhdl work "../../06-display_driver/display_driver/clock_enable.vhd"
-vhdl work "../../06-display_driver/display_driver/driver_7seg.vhd"
