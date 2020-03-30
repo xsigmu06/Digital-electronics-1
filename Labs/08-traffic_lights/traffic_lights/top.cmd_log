@@ -1,1 +1,0 @@
-xst -intstyle ise -ifn "/home/ise/ise/08-traffic_lights/traffic_lights/top.xst" -ofn "/home/ise/ise/08-traffic_lights/traffic_lights/top.syr" 
