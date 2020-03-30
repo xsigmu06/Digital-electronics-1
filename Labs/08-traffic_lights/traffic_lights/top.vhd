@@ -35,15 +35,15 @@ entity top is
 		clk_i : in std_logic;
 		BTN0  : in std_logic;
 		
-		LDW_r, LDW_o, LDW_g, LDS_r, LDS_o, LDS_g : out std_logic
-		-- LD12_CPLD, LD8_CPLD, LD5_CPLD, LD4_CPLD, LD1_CPLD, LD0_CPLD : out std_logic -- for clpd board
+		LDW_5, LDW_4, LDW_3, LDS_2, LDS_1, LDS_0 : out std_logic
+		-- LD4_CPLD, LD13_CPLD, LD12_CPLD, LD0_CPLD, LD9_CPLD, LD8_CPLD : out std_logic -- for clpd board
 	);
 end entity top;
 
 architecture Behavioral of top is
 
 	signal s_en : std_logic;
-	signal lights_o : unsigned (5 downto 0);
+	signal s_lights_o : unsigned (5 downto 0);
 	
 	begin
 		CLK_EN : entity work.clock_enable
@@ -58,26 +58,28 @@ architecture Behavioral of top is
 
 		TRAFFIC_LIGHTS : entity work.traffic_lights
 			port map(
-				c_en 		=> s_en,
-				srst_n_i => BTN0,
-				clk_i		=> clk_i,
-				lights 	=> lights_o
+				ce_n_i 		=> s_en,
+				srst_n_i 	=> BTN0,
+				clk_i			=> clk_i,
+				lights_o 	=> s_lights_o
 			);
 
-		LDW_r		<=	lights_o(5);	-- light west red
-		LDW_o 	<=	lights_o(4);	-- light west orange
-		LDW_g 	<=	lights_o(3);	-- light west green
-		LDS_r 	<=	lights_o(2);	-- light south red..
-		LDS_o 	<=	lights_o(1);
-		LDS_g 	<=	lights_o(0);
+		LDW_5		<=	s_lights_o(5);	-- NorthSouth_Red
+		LDW_4 	<=	s_lights_o(4);	-- NorthSouth_Orange
+		LDW_3 	<=	s_lights_o(3);	-- NorthSouth_Green
+		
+		LDS_2 	<=	s_lights_o(2);	-- EastWest_Red
+		LDS_1 	<=	s_lights_o(1);	-- EastWest_Orange
+		LDS_0 	<=	s_lights_o(0);	-- EastWest_Green
 		
 		-- for cpld board
---		LD12_CPLD		<=	lights_o(5);	-- light west red
---		LD5_CPLD 	<=	lights_o(4);	-- light west orange
---		LD4_CPLD 	<=	lights_o(3);	-- light west green
---		LD8_CPLD 	<=	lights_o(2);	-- light south red..
---		LD1_CPLD 	<=	lights_o(1);
---		LD0_CPLD 	<=	lights_o(0);
+--		LD4_CPLD		<=	s_lights_o(5);	
+--		LD13_CPLD 	<=	s_lights_o(4);
+--		LD12_CPLD 	<=	s_lights_o(3);	
+
+--		LD0_CPLD 	<=	s_lights_o(2);
+--		LD9_CPLD 	<=	s_lights_o(1);
+--		LD8_CPLD 	<=	s_lights_o(0);
 
 end Behavioral;
 

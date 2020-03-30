@@ -43,7 +43,7 @@ ARCHITECTURE behavior OF traffic_lights_tb00 IS
     PORT(
          clk_i : IN  std_logic;
          srst_n_i : IN  std_logic;
-         c_en : IN  std_logic;
+         ce_n_i : IN  std_logic;
          lights : OUT  std_logic_vector(5 downto 0)
         );
     END COMPONENT;
@@ -52,7 +52,7 @@ ARCHITECTURE behavior OF traffic_lights_tb00 IS
    --Inputs
    signal clk_i : std_logic := '0';
    signal srst_n_i : std_logic := '0';
-   signal c_en : std_logic := '0';
+   signal ce_n_i : std_logic := '0';
 
  	--Outputs
    signal lights : std_logic_vector(5 downto 0);
@@ -66,7 +66,7 @@ BEGIN
    uut: traffic_lights PORT MAP (
           clk_i => clk_i,
           srst_n_i => srst_n_i,
-          c_en => c_en,
+          ce_n_i => ce_n_i,
           lights => lights
         );
 

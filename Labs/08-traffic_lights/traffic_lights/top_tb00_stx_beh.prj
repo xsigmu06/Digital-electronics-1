@@ -1,4 +1,0 @@
-vhdl isim_temp "traffic_lights.vhd"
-vhdl isim_temp "clock_enable.vhd"
-vhdl isim_temp "top.vhd"
-vhdl isim_temp "top_tb00.vhd"

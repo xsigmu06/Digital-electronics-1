@@ -14,97 +14,107 @@ entity traffic_lights is
 	port(
 		clk_i    : in  std_logic;
 		srst_n_i : in  std_logic;   -- Synchronous reset (active low)
-		c_en 		: in  std_logic;
+		ce_n_i 	: in  std_logic;
 		
-		lights  : out unsigned(5 downto 0)
+		lights_o  : out unsigned(5 downto 0)
 	);
 end entity traffic_lights;
 
 architecture Behavioral of traffic_lights is
 
-	type state_type is (wg,stop1,sr,sg,stop2,wr);
+	type state_type is (NorthSouth_Green, NorthSouth_Orange, BothRed1, EastWest_Green, EastWest_Orange, BothRed2);
 	
-	signal state: state_type;
+	signal s_state: state_type;
 	signal s_cnt: unsigned(3 downto 0) := "0000";
 	
-	constant SEC5: unsigned(3 downto 0) := "0100";  -- s_cnt to 5
-	constant SEC1: unsigned(3 downto 0) := "0000";  -- s_cnt to 1
+	constant SEC5: unsigned(3 downto 0) := "0100";  -- 4 (dec) <= 1Hz clock| count to 5 (from 0 to 4)
+	constant SEC1: unsigned(3 downto 0) := "0000";  -- count to 1
 
 	begin
 
-	traffic: process(clk_i, srst_n_i,c_en)
+	traffic: process(clk_i)
 		begin
-			if rising_edge(clk_i) then -- and rising_edge(c_en)  then 
-				if srst_n_i = '0' then -- synchronous reset, active low
+			if rising_edge(clk_i) then
+				if srst_n_i = '0' then 	-- synchronous reset, active low
 					s_cnt <= (others => '0');
-					state <= wg;
-				elsif c_en = '1' then 
-					case state is
-						when wg =>
+					s_state <= NorthSouth_Green;	-- state 0
+					
+				elsif ce_n_i = '1' then 
+					case s_state is
+					
+						when NorthSouth_Green =>
 							if s_cnt < SEC5 then
-								state <= wg;
+								s_state <= NorthSouth_Green;
 								s_cnt <= s_cnt + 1;
 							else
-								state <= stop1;
+								s_state <= NorthSouth_Orange;
 								s_cnt <= x"0";
 							end if;
-						when stop1 =>
+							
+						when NorthSouth_Orange =>
 								if s_cnt < SEC1 then
-								state <= stop1;
+								s_state <= NorthSouth_Orange;
 								s_cnt <= s_cnt + 1;
 							else
-								state <= sr;
+								s_state <= BothRed1;
 								s_cnt <= x"0";
 							end if;
-						when sr =>
+							
+						when BothRed1 =>
 							if s_cnt < SEC1 then
-								state <= sr;
+								s_state <= BothRed1;
 								s_cnt <= s_cnt + 1;
 							else
-								state <= sg;
+								s_state <= EastWest_Green;
 								s_cnt <= x"0";
 							end if;
-						when sg =>
+							
+						when EastWest_Green =>
 							if s_cnt < SEC5 then
-								state <= sg;
+								s_state <= EastWest_Green;
 								s_cnt <= s_cnt + 1;
 							else
-								state <= stop2;
+								s_state <= EastWest_Orange;
 								s_cnt <= x"0";
 							end if;
-						when stop2 =>
+							
+						when EastWest_Orange =>
 							if s_cnt < SEC1 then
-								state <= stop2;
+								s_state <= EastWest_Orange;
 								s_cnt <= s_cnt + 1;
 							else
-								state <= wr;
+								s_state <= BothRed2;
 								s_cnt <= x"0";
 							end if;
-						when wr =>
+							
+						when BothRed2 =>
 							if s_cnt < SEC1 then
-								state <= wr;
+								s_state <= BothRed2;
 								s_cnt <= s_cnt + 1;
 							else
-								state <= wg;
+								s_state <= NorthSouth_Green;
 								s_cnt <= x"0";
 							end if;
+							
 						when others =>
-							state <= wg;
+							s_state <= NorthSouth_Green;
+							
 					end case;   
 				end if;		
 			end if;				
 		end process traffic;
 
-	Assign : process(state)
+	Assign : process(s_state)
 		begin
-			case state is
-				when wg		=> lights <= "001100";  -- R O G R O G  from west to south,	wg...west go
-				when stop1 	=> lights <= "100100";	-- stop...both red
-				when sr		=> lights <= "100010";	-- sr...south ready
-				when sg 		=> lights <= "100001";	-- sg...south go
-				when stop2 	=> lights <= "100100";	-- stop...both red
-				when wr 		=> lights <= "010100";	-- wr...west ready
-				when others => lights <= "001100";
+			case s_state is
+				when NorthSouth_Green	=> lights_o <= "001100";  -- "001100" ... Red Orange Green Red Orange Green (NorthSouth light to EastWest light)
+				when NorthSouth_Orange 	=> lights_o <= "010100";
+				when BothRed1				=> lights_o <= "100100";
+				
+				when EastWest_Green 		=> lights_o <= "100001";
+				when EastWest_Orange 	=> lights_o <= "100010";
+				when BothRed2 				=> lights_o <= "100100";
+				when others => lights_o <= "001100";
 			end case;
 		end process;
 end Behavioral;

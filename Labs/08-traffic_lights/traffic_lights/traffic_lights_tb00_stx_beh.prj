@@ -1,2 +1,0 @@
-vhdl isim_temp "traffic_lights.vhd"
-vhdl isim_temp "traffic_lights_tb00.vhd"
