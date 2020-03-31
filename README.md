@@ -16,4 +16,4 @@
 | [06-Display_driver](/Labs/06-display_driver) | Lab 6: Display driver |
 | [07-Stopwatch](/Labs/07-stopwatch) | Lab 7: Stopwatch |
 | [08-Traffic-lights](/Labs/08-traffic_lights) | Lab 8: Traffic_lights |
-| ... | Lab 9-13: Project |
+| [Project](/Labs/Project)| Lab 9-13: Project |
