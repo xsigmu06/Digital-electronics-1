@@ -1,24 +1,34 @@
-# Lab 8: Traffic light controller
+# Lab 9-13: Ultrazvukový měřič vzdálenosti HC-SR04
 
-#### Objectives
+#### Contents
 
-In this laboratory exercise you will implement a finite state machine, specifically a traffic light controller at a junction. You will use the Xilinx Isim simulator or the EDA playground online tool. You will use a push button on the CoolRunner board as reset device, onboard clock signal with frequency of 10&nbsp;kHz for synchronization, and CPLD expansion board LEDs as outputs.
+1. [Introduction](#Introduction)
+2. [Hardware description](#Hardware-description)
+3. [Code description](#Code-description)
+4. [Video](#Video)
+5. [References](#References)
 
-## States
 
-&nbsp;
-    ![states](../../Images/traffic_states.png)
-    &nbsp;
-    
-## Top
+## Introduction
 
-&nbsp;
-    ![simulation_leds](../../Images/traffic_sim.png)
-    &nbsp;
-    
-&nbsp;
-    ![top](../../Images/traffic_sch.png)
-    &nbsp;  
-    
+TBD
 
-  
+
+## Hardware description
+
+TBD
+
+
+## Code description
+
+TBD
+
+
+## Video
+
+TBD
+
+
+## References
+
+TBD
