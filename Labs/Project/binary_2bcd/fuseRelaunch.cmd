@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "F:/projekty_de/binary_2bcd/binary_2bcd_tb00_isim_beh.exe" -prj "F:/projekty_de/binary_2bcd/binary_2bcd_tb00_beh.prj" "work.binary_2bcd_tb00" 
