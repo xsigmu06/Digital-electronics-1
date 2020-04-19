@@ -23,6 +23,14 @@ Po sepnutí vstupu modulu Trig (High) po dobu aspoň 10 mikrosekund vyšle vysok
 
 4 propojovací piny - VCC na +5V, GND na zem, Trig a Echo
 
+&nbsp;
+    ![HC-SR04](../../Images/prj_meric.png)
+    &nbsp;
+    
+&nbsp;
+    ![Signals](../../Images/prj_signaly.png)
+    &nbsp;
+
 
 TBD
 
