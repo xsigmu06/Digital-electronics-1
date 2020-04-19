@@ -12,6 +12,10 @@
 
 ## Úvod
 
+&nbsp;
+    ![HC-SR04](../../Images/prj_meric.png)
+    &nbsp;
+    
 Tento modul umožňuje spolehlivou detekci v rozmezí 2 centimetrů až 4 metrů. Používá se u robotů a obecně pro zkoumání prostoru před senzorem. Nejlépe měří cca první 2 metry od modulu, až na 3 mm přesně. Pracovní úhel detekce je okolo 15 stupňů. Dalším důležitým parametrem je také konstanta pro převod naměřené odezvy na vzdálenost. Na desce se nachází ultrazvukový vysílač, přijímač a integrované obvody pro zajištění správné funkce.
 
 TBD
@@ -23,10 +27,6 @@ Po sepnutí vstupu modulu Trig (High) po dobu aspoň 10 mikrosekund vyšle vysok
 
 4 propojovací piny - VCC na +5V, GND na zem, Trig a Echo
 
-&nbsp;
-    ![HC-SR04](../../Images/prj_meric.png)
-    &nbsp;
-    
 &nbsp;
     ![Signals](../../Images/prj_signaly.png)
     &nbsp;
