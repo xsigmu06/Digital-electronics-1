@@ -23,8 +23,8 @@ TBD
 
 ## Princip
 
-Po sepnutí vstupu modulu Trig (High) po dobu aspoň 10 mikrosekund vyšle vysokofrekvenční pulz (40 kHz). Signál se odrazí a přijímač jej zachytí. Přečteme délku impulzu z výstupu Echo a převedeme na vzdálenost v centimetrech.  
-Vyjdeme ze vzorce _s = t * v_. Za _v_ dosadíme rychlost zvuku při 20° C (343 m/s -> 0,0343 cm/us) a celou vzdálenost _s_ podělíme 2 (vzdálenost k překážce a zpět).
+Po sepnutí vstupu modulu Trig (High) po dobu aspoň 10 mikrosekund vyšle vysokofrekvenční pulz (40 kHz). Signál se odrazí od překážky a přijímač jej zachytí. Pomocí impulzu z výstupu Echo (High) vypočítáme vzdálenost v centimetrech.  
+Vyjdeme ze vzorce _s = t * v_. Za _v_ dosadíme rychlost zvuku při 20° C (343 m/s -> 0,0343 cm/us), _t_ bude doba impulzu Echo podělená dvěma (měří signál odražený).
 
 4 propojovací piny - VCC na +5V, GND na zem, Trig a Echo
 
