@@ -7,7 +7,7 @@
 
 3. [Code description](#Code-description)
 4. [Video](#Video)
-5. [References](#References)
+5. [Zdroje](#Zdroje)
 
 
 ## Úvod
@@ -23,7 +23,7 @@ TBD
 
 ## Princip
 
-Po sepnutí vstupu modulu Trig (High) po dobu aspoň 10 mikrosekund vyšle vysokofrekvenční pulz (40 kHz). Ihned po vyslání se spustí Echo (High). Signál se odrazí od překážky, přijímač jej zachytí a ukončí trvání Echo. Pomocí tohoto impulzu vypočítáme vzdálenost v centimetrech.  
+Pro spuštění modul vyžaduje na vstup Trig signál (High) po dobu alespoň 10 mikrosekund. Vysílač vyšle vysokofrekvenční pulz (40 kHz). Po vyslání se spustí Echo (High). Pokud se signál se odrazí od překážky, přijímač jej zachytí a ukončí trvání Echo. Pomocí tohoto impulzu vypočítáme vzdálenost v centimetrech.  
 Vyjdeme ze vzorce _s = t * v_. Za _v_ dosadíme rychlost zvuku při 20 _°C_ (343 _m/s_ -> 0,0343 _cm/us_), _t_ bude doba impulzu Echo podělená dvěma (měří signál odražený).
 
 4 propojovací piny - VCC na +5V, GND na zem, Trig a Echo
@@ -46,6 +46,7 @@ TBD
 TBD
 
 
-## References
+## Zdroje
 
+https://navody.arduino-shop.cz/navody-k-produktum/meric-vzdalenosti-ultrazvukovy.html
 TBD
