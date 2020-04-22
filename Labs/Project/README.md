@@ -35,7 +35,10 @@ Vyjdeme ze vzorce _s = t * v_. Za _v_ dosadíme rychlost zvuku při 20 _°C_ (34
 
 TBD
 
-
+## States
+&nbsp;
+    ![HC-SR04states](../../Images/hcsr04states.png)
+    &nbsp;
 ## Code description
 
 TBD
