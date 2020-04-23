@@ -60,7 +60,7 @@ ARCHITECTURE behavior OF hc_sr04_tb00 IS
    signal dstnc_o : std_logic_vector(11 downto 0);
 
    -- Clock period definitions
-   constant clk_i_period : time := 10 ns;
+   constant clk_i_period : time := 1 us;
  
 BEGIN
  
@@ -84,7 +84,7 @@ BEGIN
  
 
    -- Stimulus process
-   stim_proc: process
+stim_proc: process
    begin		
       -- hold reset state for 100 ns.
       wait for 100 ns;	
@@ -94,11 +94,12 @@ BEGIN
       -- insert stimulus here  
       wait for clk_i_period*50;
 	  echo_i <= '1';
-	  wait for clk_i_period*100;
+	  wait for clk_i_period*4705;
 	  echo_i <= '0';
 
 
       wait;
    end process;
+
 
 END;

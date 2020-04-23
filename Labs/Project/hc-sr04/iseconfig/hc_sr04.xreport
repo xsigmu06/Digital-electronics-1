@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-04-22T18:59:06</DateModified>
+  <DateModified>2020-04-23T12:45:19</DateModified>
   <ModuleName>hc_sr04</ModuleName>
-  <SummaryTimeStamp>2020-04-22T18:16:21</SummaryTimeStamp>
+  <SummaryTimeStamp>2020-04-23T12:44:42</SummaryTimeStamp>
   <SavedFilePath>F:/projekty_de/hc-sr04/iseconfig/hc_sr04.xreport</SavedFilePath>
   <ImplementationReportsDirectory>F:/projekty_de/hc-sr04\</ImplementationReportsDirectory>
   <DateInitialized>2020-04-21T10:43:53</DateInitialized>

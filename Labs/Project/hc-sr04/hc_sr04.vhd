@@ -19,8 +19,7 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.std_logic_arith.all;
-use IEEE.std_logic_unsigned.all;
+use IEEE.numeric_std.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -47,12 +46,12 @@ architecture Behavioral of hc_sr04 is
 		signal s_state: state_type;
 		signal s_cntEcho: unsigned (14 downto 0) := "000000000000000"; -- (2* 4m) / 340m/s = 23 530 us -> 2^15= 32 768
 		signal s_cntTrig: unsigned (3 downto 0) :="0000";
-		signal sound: unsigned (14 downto 0);
-		signal result : STD_LOGIC_VECTOR(30 downto 0);
+		signal sound: unsigned (14 downto 0) :="000000000000000";
+		signal result : STD_LOGIC_VECTOR(30 downto 0):="0000000000000000000000000000000";
 		signal s_en : STD_LOGIC;
 
 		constant trigstart : unsigned (3 downto 0) := "1010";
-		constant soundspeed : STD_LOGIC_VECTOR(15 downto 0) := "0010101110000101"; -- mm/us  /2
+		constant soundspeed : unsigned(15 downto 0) := "0010101110000101"; -- mm/us  /2
 		
 	begin
 	
@@ -106,11 +105,11 @@ architecture Behavioral of hc_sr04 is
 									sound <=  s_cntEcho;
 								end if;
 						when Calc => 		
-									result <= unsigned(sound) * unsigned(soundspeed);		
-									dstnc_o <= result(27 downto 16);
+									result <= std_logic_vector(unsigned(sound) * unsigned(soundspeed));		
 									s_state <= Reset;
 						when Reset =>
 									s_state <= Trigger;
+									dstnc_o <= result(27 downto 16);
 									s_cntEcho <= "000000000000000";
 									
 						when others => 
