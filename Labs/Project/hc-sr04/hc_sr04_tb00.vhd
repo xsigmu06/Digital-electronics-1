@@ -96,6 +96,15 @@ stim_proc: process
 	  echo_i <= '1';
 	  wait for clk_i_period*4705;
 	  echo_i <= '0';
+	    wait for clk_i_period*20;
+	  echo_i <= '1';
+	  wait for clk_i_period*23800;
+	  echo_i <= '0';
+	   wait for clk_i_period*20;
+	  echo_i <= '1';
+	  wait for clk_i_period*11746;
+	  echo_i <= '0';
+    
 
 
       wait;

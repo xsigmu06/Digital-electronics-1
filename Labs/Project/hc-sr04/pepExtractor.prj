@@ -1,2 +1,6 @@
-work	"C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-2/Labs/06-display_driver/display_driver/clock_enable.vhd"
+work	"Top.vhd"
+work	"binary_2bcd.vhd"
+work	"clock_enable.vhd"
+work	"driver_7seg.vhd"
 work	"hc_sr04.vhd"
+work	"hex_to_7seg.vhd"

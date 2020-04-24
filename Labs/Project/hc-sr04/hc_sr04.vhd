@@ -35,7 +35,7 @@ entity hc_sr04 is
            srst_n_i : in  STD_LOGIC;  -- active low
            echo_i : in  STD_LOGIC;
            trig_o : out  STD_LOGIC :='0' ;
-		   dstnc_o : out STD_LOGIC_VECTOR (11 downto 0) := "000000000000" -- 4000 mm
+		   dstnc_o : out STD_LOGIC_VECTOR (11 downto 0) := x"000" -- 4000 mm
 		   );
 end hc_sr04;
 
@@ -44,14 +44,15 @@ architecture Behavioral of hc_sr04 is
 		type state_type is (Trigger, Pulse, Echo, Calc, Reset);
 	
 		signal s_state: state_type;
-		signal s_cntEcho: unsigned (14 downto 0) := "000000000000000"; -- (2* 4m) / 340m/s = 23 530 us -> 2^15= 32 768
 		signal s_cntTrig: unsigned (3 downto 0) :="0000";
-		signal sound: unsigned (14 downto 0) :="000000000000000";
+		signal s_cnt : unsigned (14 downto 0) := "000000000000000"; -- (2* 4m) / 340m/s = 23 530 us -> 2^15= 32 768
+		signal s_cntMax : unsigned (15 downto 0) := x"0000";
 		signal result : STD_LOGIC_VECTOR(30 downto 0):="0000000000000000000000000000000";
 		signal s_en : STD_LOGIC;
 
 		constant trigstart : unsigned (3 downto 0) := "1010";
 		constant soundspeed : unsigned(15 downto 0) := "0010101110000101"; -- mm/us  /2
+		constant maxdist : unsigned(15 downto 0) := x"FFFF";  -- najdlhsi cas (8metrov = 2 *4) 
 		
 	begin
 	
@@ -72,7 +73,7 @@ architecture Behavioral of hc_sr04 is
 			if rising_edge(clk_i) then
 				if srst_n_i = '0' then 	-- synchronous reset, active low
 					s_cntTrig <= (others => '0');
-					s_cntEcho <= (others => '0') ;
+					s_cnt <= (others => '0');
 					s_state <= Trigger;	-- state 0
 					
 				elsif s_en = '1' then
@@ -91,26 +92,31 @@ architecture Behavioral of hc_sr04 is
 								
 						when Pulse => 
 								if echo_i = '1' then
-									s_cntEcho <= s_cntEcho + 1;
+									s_cnt <= s_cnt + 1;
 									s_state <= Echo;
-								else
+								elsif s_cntMax < maxdist then
+									s_cntMax <= s_cntMax + 1;
 									s_state <= Pulse;
+								else 
+									s_cntMax <= x"0000";
+									s_state <= Trigger;
 								end if;
+								
 						when Echo => 
 								if echo_i = '1' then
 									s_state <= Echo;
-									s_cntEcho <= s_cntEcho + 1;
-								else 
+									s_cnt <= s_cnt + 1;
+								else
 									s_state <= calc;
-									sound <=  s_cntEcho;
 								end if;
 						when Calc => 		
-									result <= std_logic_vector(unsigned(sound) * unsigned(soundspeed));		
+									result <= std_logic_vector(unsigned(s_cnt) * unsigned(soundspeed));		
 									s_state <= Reset;
 						when Reset =>
 									s_state <= Trigger;
 									dstnc_o <= result(27 downto 16);
-									s_cntEcho <= "000000000000000";
+									s_cnt <= "000000000000000";
+									
 									
 						when others => 
 									s_state <= Trigger;

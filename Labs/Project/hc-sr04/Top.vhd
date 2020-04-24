@@ -31,56 +31,56 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity Top is
 	port (
-	 clk_i : in std_logic;
-	 BTN0 : in std_logic;
-	 echo : in std_logic;
-	 trig : out std_logic
+		 clk_i : in std_logic;
+		 BTN0 : in std_logic;
+		 echo : in std_logic;
+		 trig : out std_logic;
+		 disp_seg_o : out std_logic_vector(7-1 downto 0);
+		 disp_dig_o : out std_logic_vector(4-1 downto 0);
+		 disp_dp : out std_logic
 	 );
 end Top;
 
 architecture Behavioral of Top is
 
 	signal s_en : std_logic;
-	signal s_data0_i ,s_data1_i, s_data2_i, s_data3_i : std_logic_vector(3 downto 0);
+	signal s_data0 ,s_data1, s_data2, s_data3 : std_logic_vector(3 downto 0);
 	signal s_dist : std_logic_vector (11 downto 0);
 begin
-			CLK_EN : entity work.clock_enable
-			generic map (
-				g_NPERIOD => X"1" -- 1 s for fclk = 10 kHz 
-			)
-			port map( 
-				srst_n_i 		=> BTN0,
-				clk_i 			=> clk_i,
-				clock_enable_o => s_en
-			);
-			
 			HC_SR04 : entity work.hc_sr04
 			port map(
-			clk_i  => clk_i,
-           srst_n_i => BTN0,
-           echo_i => echo,
-           trig_o => trig,
-		   ce_n_i => s_en,
-		   dstnc_o => s_dist
-		   );
+				clk_i  => clk_i,
+				srst_n_i => BTN0,
+			   echo_i => echo,
+			   trig_o => trig,
+			   dstnc_o => s_dist
+			  );
+		
 		   
 		   BINARY_2BCD : entity work.binary_2bcd
 		   port map(
-		   dstnc_i => s_dist,
-		   m_o => s_data3,
-		   dm_o => s_data2,
-		   cm_o => s_data1,
-		   mm_o => s_data0,
-		   );
+				clk_i  => clk_i,
+				srst_n_i => BTN0,
+				dstnc_i => s_dist,
+				m_o => s_data3,
+				dm_o => s_data2,
+				cm_o => s_data1,
+				mm_o => s_data0
+			   );
 		   
-		   DRIVER_7SEG : entity work.driver_7seg;
+		   DRIVER_7SEG : entity work.driver_7seg
 		   port map(
-				clk_i => clk_i;
-				srst_n_i => BTN0;
-				data3_i => s_data3;
-				data2_i => s_data2;
-				data1_i => s_data1;
-				data0_i => s_data0;
+				clk_i => clk_i,
+				srst_n_i => BTN0,
+				data3_i => s_data3,
+				data2_i => s_data2,
+				data1_i => s_data1,
+				data0_i => s_data0,
+				seg_o => disp_seg_o,
+				dig_o => disp_dig_o,
+				dp_o => disp_dp,
+				dp_i => "1110"
+				);
 		   
 		   
 		   

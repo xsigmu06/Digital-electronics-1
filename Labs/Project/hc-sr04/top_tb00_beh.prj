@@ -1,0 +1,7 @@
+vhdl work "hex_to_7seg.vhd"
+vhdl work "clock_enable.vhd"
+vhdl work "hc_sr04.vhd"
+vhdl work "driver_7seg.vhd"
+vhdl work "binary_2bcd.vhd"
+vhdl work "Top.vhd"
+vhdl work "top_tb00.vhd"
