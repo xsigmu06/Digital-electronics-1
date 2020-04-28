@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -o "F:/projekty_de/hc-sr04/hc_sr04_tb00_isim_beh.exe" -prj "F:/projekty_de/hc-sr04/hc_sr04_tb00_beh.prj" "work.hc_sr04_tb00" 

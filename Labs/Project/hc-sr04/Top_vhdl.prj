@@ -1,6 +1,0 @@
-vhdl work "F:\projekty_de\hc-sr04\hex_to_7seg.vhd"
-vhdl work "F:\projekty_de\hc-sr04\clock_enable.vhd"
-vhdl work "F:\projekty_de\hc-sr04\hc_sr04.vhd"
-vhdl work "F:\projekty_de\hc-sr04\driver_7seg.vhd"
-vhdl work "F:\projekty_de\hc-sr04\binary_2bcd.vhd"
-vhdl work "F:\projekty_de\hc-sr04\Top.vhd"

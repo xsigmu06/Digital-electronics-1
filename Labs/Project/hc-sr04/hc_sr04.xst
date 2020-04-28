@@ -1,5 +1,0 @@
-set -tmpdir "F:/projekty_de/hc-sr04/xst/projnav.tmp"
-set -xsthdpdir "F:/projekty_de/hc-sr04/xst"
-elaborate
--ifn hc_sr04.prj
--ifmt mixed
