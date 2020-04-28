@@ -40,7 +40,7 @@ TBD
     ![HC-SR04states](../../Images/hcsr04states.png)
     &nbsp;
 ## Code description
-[top](/Labs/Project/top.vhd)
+[top](/Labs/Project/hc-sr04_edit/Top.vhd)
 TBD
 
 
