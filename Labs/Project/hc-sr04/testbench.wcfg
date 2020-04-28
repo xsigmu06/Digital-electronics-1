@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="F:/projekty_de/hc-sr04/hc_sr04_tb00_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="hc_sr04_tb00" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="9" />
+   <wvobject fp_name="/hc_sr04_tb00/clk_i" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_i</obj_property>
+      <obj_property name="ObjectShortName">clk_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hc_sr04_tb00/srst_n_i" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">srst_n_i</obj_property>
+      <obj_property name="ObjectShortName">srst_n_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hc_sr04_tb00/echo_i" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">echo_i</obj_property>
+      <obj_property name="ObjectShortName">echo_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hc_sr04_tb00/trig_o" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">trig_o</obj_property>
+      <obj_property name="ObjectShortName">trig_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hc_sr04_tb00/dstnc_o" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dstnc_o[11:0]</obj_property>
+      <obj_property name="ObjectShortName">dstnc_o[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hc_sr04_tb00/clk_i_period" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_i_period</obj_property>
+      <obj_property name="ObjectShortName">clk_i_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hc_sr04_tb00/uut/s_state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">s_state</obj_property>
+      <obj_property name="ObjectShortName">s_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hc_sr04_tb00/uut/s_cnttrig" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_cnttrig[3:0]</obj_property>
+      <obj_property name="ObjectShortName">s_cnttrig[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hc_sr04_tb00/uut/s_cntecho" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_cntecho[14:0]</obj_property>
+      <obj_property name="ObjectShortName">s_cntecho[14:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>
