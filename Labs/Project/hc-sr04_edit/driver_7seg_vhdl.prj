@@ -1,0 +1,3 @@
+vhdl work "/home/ise/ise/Project/hc-sr04/hex_to_7seg.vhd"
+vhdl work "/home/ise/ise/Project/hc-sr04/clock_enable.vhd"
+vhdl work "/home/ise/ise/Project/hc-sr04/driver_7seg.vhd"
