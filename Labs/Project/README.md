@@ -13,7 +13,7 @@
 ## Úvod
 
 &nbsp;
-    ![HC-SR04](../../Images/prj_meric.png)
+    ![HC-SR04](../../Images/Project/prj_meric.png)
     &nbsp;
     
 Tento modul umožňuje spolehlivou detekci v rozmezí 2 centimetrů až 4 metrů. Používá se u robotů a obecně pro měření prostoru před senzorem. Nejlépe měří cca první 2 metry od modulu, až na 3 mm přesně. Pracovní úhel detekce je okolo 15 stupňů. Na desce se nachází ultrazvukový vysílač, přijímač a integrované obvody pro zajištění správné funkce.
@@ -29,7 +29,7 @@ Vyjdeme ze vzorce _s = t * v_. Za _v_ dosadíme rychlost zvuku při 20 _°C_ (34
 4 propojovací piny - VCC na +5V, GND na zem, Trig a Echo
 
 &nbsp;
-    ![Signals](../../Images/prj_signaly.png)
+    ![Signals](../../Images/Project/prj_signaly.png)
     &nbsp;
 
 
@@ -37,7 +37,7 @@ TBD
 
 ## States
 &nbsp;
-    ![HC-SR04states](../../Images/hcsr04states.png)
+    ![HC-SR04states](../../Images/Project/hcsr04states.png)
     &nbsp;
 ## Code description
 [top](/Labs/Project/hc-sr04_edit/Top.vhd)
