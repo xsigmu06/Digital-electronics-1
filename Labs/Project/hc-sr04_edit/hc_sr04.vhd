@@ -125,10 +125,10 @@ begin
 					
 				when Calc => 		
 					s_result 	<= std_logic_vector(unsigned(s_cntMeas) * unsigned(soundSpeed));		
-					s_state <= Reset;
+					s_state 	<= Reset;
 					
 				when Reset =>
-					if s_cntMax 	< maxDist then
+					if s_cntMax < maxDist then
 						s_cntMax 	<= s_cntMax + 1;
 						
 					else						
