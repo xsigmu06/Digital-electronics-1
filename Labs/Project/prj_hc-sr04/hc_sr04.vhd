@@ -50,10 +50,10 @@ architecture Behavioral of hc_sr04 is
 	signal s_result 	: STD_LOGIC_VECTOR (30 downto 0); 
 	signal s_en 		: STD_LOGIC;
 
-	constant trigStart 	: unsigned (3 downto 0) := "1010";		-- controls trigger to be 10 us long along with s_cntTrig 
+	constant trigStart 	: unsigned (3 downto 0) := "1010";	-- controls trigger to be 10 us long along with s_cntTrig 
 	constant soundSpeed : unsigned (15 downto 0) := "0010101110000101"; -- speed of sound mm/us divided by 2 in 16 bits ( 0.17 * 2^16 = 11141 )
 	constant period 	: unsigned (15 downto 0) := x"FFFF";  	-- to prevent trigger into echo
-	constant maxMeas	: unsigned (15 downto 0) := x"5BEA";	-- max time (23 530)
+	constant maxMeas	: unsigned (15 downto 0) := x"5BEA";	-- to prevent overflow - max time (23 530)
 		
 begin
 	
