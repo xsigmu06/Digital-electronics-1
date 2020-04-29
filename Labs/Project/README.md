@@ -55,25 +55,25 @@ Modul HC-SR04 má 4 propojovací piny - _VCC_ (+5_V_), _GND_ (zem), _Trig_ a _Ec
 &nbsp;
     ![States Diagram](../../Images/Project/prj_states.png)
 #### Popis stavů    
-První stav Trigger nám umožní poslat přesně 10 us dlouhý trigger signál do modulu, který vypustí vysokofrekvenční impulzy z vysílače.
+První stav _Trigger_ nám umožní poslat přesně 10 _us_ dlouhý trigger signál do modulu, který vypustí vysokofrekvenční impulzy z vysílače.
 &nbsp;
     ![Trigger tb](../../Images/Project/prj_trig.png)
     &nbsp;
     _Řídící signál trigger (červeně) trvá 10 us než přejde na další stav._
     
-Druhý stav Pulse kontroluje, jestli se vyslané impulzy odrazily a vrátily na přijímač. Jestliže není vrácené echo detekované do 65 ms, vrátí se zpět na stav první.
+Druhý stav _Pulse_ kontroluje, jestli se vyslané impulzy odrazily a vrátily na přijímač. Jestliže není vrácené echo detekované do 65 _ms_, vrátí se zpět na stav první.
 &nbsp;
     ![Pulse tb](../../Images/Project/prj_pulse.png)
     &nbsp;
     _Stav Pulse čeká na odražený impulz echo (červeně) a následující stav Echo spustí čítač (fialově) na měření jeho délky._
     
-Třetí stav Echo měří čas, jak dlouho je echo v aktivní úrovni.
+Třetí stav _Echo_ měří čas, jak dlouho je echo v aktivní úrovni. Pokud _Echo_ trvá déle než 23,5 _ms_ (4000 _mm_), dosavadní proces se řádně ukončí a začne nový.
 &nbsp;
     ![Echo tb](../../Images/Project/prj_echo.png)
     
-Čtvrtý stav Calc provede výpočet a převede daný čas na vzdálenost od překážky.
+Čtvrtý stav _Calc_ provede výpočet a převede daný čas na vzdálenost od překážky.
 
-Pátý stav Reset čeká, aby celý proces trval alespoň 65 ms, výsledek měření přiřadí do výstupu a následně přejde do stavu prvního.
+Pátý stav _Reset_ čeká, aby celý proces trval alespoň 65 _ms_, výsledek měření přiřadí do výstupu a následně přejde do stavu prvního.
     ![Reset tb](../../Images/Project/prj_reset.png)
     &nbsp;
     _Stav Reset čeká na čítač s_cntMax (fialově), tedy 65 ms, a následně vypíše výsledek měření (červeně) a celý proces se opakuje._
@@ -107,14 +107,17 @@ Pátý stav Reset čeká, aby celý proces trval alespoň 65 ms, výsledek měř
 
 
 ### Clock enable
-Rozdělí signál clock na nastavitelný počet period. Díky tomu můžeme clock signálem o dané frekvenci ovládat moduly v jiných intervalech. Používáme clock o 1 MHz (jedna perioda je 1 _us_), a aby se např. sedmisegmentové displeje zapínaly ve 4 _ms_ intervalech, musíme nastavit konstantu g_NPERIOD na 4000 (x"0FA0").
+Rozdělí signál _clock_ na nastavitelný počet period. Díky tomu můžeme _clock_ signálem o dané frekvenci ovládat moduly v jiných intervalech. Používáme clock o 1 _MHz_ (jedna perioda je 1 _us_), a aby se např. sedmisegmentové displeje zapínaly ve 4 _ms_ intervalech, musíme nastavit konstantu _g_NPERIOD_ na 4000 (x"0FA0").
 ```vhdl
+...
+
     --------------------------------------------------------------------
     -- Sub-block of clock_enable entity.
 	CLK_EN : entity work.clock_enable
 		generic map (
 			g_NPERIOD => x"0FA0"	-- @ 4 ms if fclk = 1 MHz
 		)
+		
 ...
 ```
 #### Odkaz na kód: [clock enable](/Labs/Project/prj_hc-sr04/clock_enable.vhd)
