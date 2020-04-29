@@ -80,7 +80,7 @@ Pátý stav Reset čeká, aby celý proces trval alespoň 65 ms, výsledek měř
 #### Odkaz na kód: [hc-sr04 driver](/Labs/Project/prj_hc-sr04/hc_sr04.vhd)
 
 
-### Převadeč binárního čísla na dekadické
+### Převadeč binárního čísla na BCD (binary coded decimal)
 #### BCD kód
 &nbsp;
     ![bin 2 bcd](../../Images/Project/prj_bin_bcd.png)
@@ -108,7 +108,7 @@ Pátý stav Reset čeká, aby celý proces trval alespoň 65 ms, výsledek měř
 
 ### Clock enable
 #### Odkaz na kód: [clock enable](/Labs/Project/prj_hc-sr04/clock_enable.vhd)
-
+Rozdělí signál clock na nastavitelný počet period. Díky tomu můžeme clock signálem o dané frekvenci ovládat moduly v jiných intervalech.
 
 ### Ovladač 7 segmentového displeje
 #### Odkaz na kód: [7 segment display driver](/Labs/Project/prj_hc-sr04/driver_7seg.vhd)
