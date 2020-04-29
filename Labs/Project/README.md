@@ -50,7 +50,7 @@ Modul HC-SR04 má 4 propojovací piny - _VCC_ (+5 _V_), _GND_ (zem), _Trig_ a _E
 
 
 ### Ovladač hc-sr04 
-
+Řešili jsme jako FSM (finite-state machine).
 #### Stavový diagram
 &nbsp;
     ![States Diagram](../../Images/Project/prj_states.png)
