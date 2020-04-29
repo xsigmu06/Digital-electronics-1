@@ -42,9 +42,11 @@ FPGA Coolrunner nemá možnosť pripojenia modulu s napájaním 5V preto je potr
 &nbsp;
     ![HC-SR04states](../../Images/Project/hcsr04states.png)
     &nbsp;
+ 
 ## Code description
 [top](/Labs/Project/hc-sr04_edit/Top.vhd)
 
+#Driver hc-sr04 
 [hc-sr04 driver](/Labs/Project/hc-sr04_edit/hc_sr04.vhd)
 
 &nbsp;
@@ -52,30 +54,26 @@ FPGA Coolrunner nemá možnosť pripojenia modulu s napájaním 5V preto je potr
     &nbsp;
     
 První stav Trigger nám umožní poslat přesně 10 us dlouhý trigger signál do modulu, který vypustí vysokofrekvenční impulzy z vysílače.
-
 &nbsp;
     ![Trigger](../../Images/Project/prj_trig.png)
     &nbsp;
     _Řídící signál trigger (červeně) trvá 10 us než přejde na další stav._
     
 Druhý stav Pulse kontroluje, jestli se vyslané impulzy odrazily a vrátily na přijímač. Jestliže není vrácené echo detekované do 65 ms, vrátí se zpět na stav první.
-
 &nbsp;
     ![Pulse](../../Images/Project/prj_pulse.png)
     &nbsp;
     _Stav Pulse čeká na odražený impulz echo (červeně) a následující stav Echo spustí čítač (fialově) na měření jeho délky._
     
 Třetí stav Echo měří čas, jak dlouho je echo v aktivní úrovni.
- 
+
 &nbsp;
     ![Echo](../../Images/Project/prj_echo.png)
     &nbsp;
 	
 Čtvrtý stav Calc provede výpočet a převede daný čas na vzdálenost od překážky.
 
-
 Pátý stav Reset čeká, aby celý proces trval alespoň 65 ms, výsledek měření přiřadí do výstupu a následně přejde do stavu prvního.
-
 &nbsp;
     ![Reset](../../Images/Project/prj_reset.png)
     &nbsp;
