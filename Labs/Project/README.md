@@ -43,16 +43,16 @@ FPGA Coolrunner nemá možnosť pripojenia modulu s napájaním 5V preto je potr
     ![HC-SR04states](../../Images/Project/hcsr04states.png)
     &nbsp;
  
-## Code description
+## Popis kódu
 [top](/Labs/Project/hc-sr04_edit/Top.vhd)
 
-### Driver hc-sr04 
-[hc-sr04 driver](/Labs/Project/hc-sr04_edit/hc_sr04.vhd)
+### Ovladač hc-sr04 
 
+#### Stavový diagram
 &nbsp;
     ![States Diagram](../../Images/Project/prj_states.png)
     &nbsp;
-    
+#### Popis stavů    
 První stav Trigger nám umožní poslat přesně 10 us dlouhý trigger signál do modulu, který vypustí vysokofrekvenční impulzy z vysílače.
 &nbsp;
     ![Trigger](../../Images/Project/prj_trig.png)
@@ -69,8 +69,7 @@ Třetí stav Echo měří čas, jak dlouho je echo v aktivní úrovni.
 
 &nbsp;
     ![Echo](../../Images/Project/prj_echo.png)
-    &nbsp;
-	
+    &nbsp;	
 Čtvrtý stav Calc provede výpočet a převede daný čas na vzdálenost od překážky.
 
 Pátý stav Reset čeká, aby celý proces trval alespoň 65 ms, výsledek měření přiřadí do výstupu a následně přejde do stavu prvního.
@@ -78,7 +77,9 @@ Pátý stav Reset čeká, aby celý proces trval alespoň 65 ms, výsledek měř
     ![Reset](../../Images/Project/prj_reset.png)
     &nbsp;
     _Stav Reset čeká na čítač s_cntMax (fialově), tedy 65 ms, a následně vypíše výsledek měření (červeně) a celý proces se opakuje._
-
+    
+#### Odkaz na kód
+[hc-sr04 driver](/Labs/Project/hc-sr04_edit/hc_sr04.vhd)
 
 [binary to bcd converter](/Labs/Project/hc-sr04_edit/binary_2bcd.vhd)
 
