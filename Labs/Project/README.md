@@ -56,6 +56,7 @@ První stav Trigger nám umožní poslat přesně 10 us dlouhý trigger signál 
 &nbsp;
     ![Trigger](../../Images/Project/prj_trig.png)
     &nbsp;
+    _Řídící signál trigger (červeně) trvá 10 us než přejde na další stav._
     
 Druhý stav Pulse kontroluje, jestli se vyslané impulzy odrazily a vrátily na přijímač. Jestliže není vrácené echo detekované do 65 ms, vrátí se zpět na stav první.
 
