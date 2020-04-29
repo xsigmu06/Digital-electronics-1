@@ -67,7 +67,6 @@ Druhý stav Pulse kontroluje, jestli se vyslané impulzy odrazily a vrátily na 
     _Stav Pulse čeká na odražený impulz echo (červeně) a následující stav Echo spustí čítač (fialově) na měření jeho délky._
     
 Třetí stav Echo měří čas, jak dlouho je echo v aktivní úrovni.
-
 &nbsp;
     ![Echo](../../Images/Project/prj_echo.png)
     &nbsp;	
