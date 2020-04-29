@@ -49,17 +49,12 @@ FPGA Coolrunner nemá možnosť pripojenia modulu s napájaním 5V preto je potr
 #### Schéma
 &nbsp;
     ![Top](../../Images/Project/prj_top_sch.png)
-    &nbsp;
-&nbsp;
     ![Top1](../../Images/Project/prj_top1_sch.png)
-    &nbsp;
 #### Odkaz na kód: [top](/Labs/Project/hc-sr04_edit/Top.vhd)
 
 ### Ovladač hc-sr04 
 #### Stavový diagram
-&nbsp;
     ![States Diagram](../../Images/Project/prj_states.png)
-    &nbsp;
 #### Popis stavů    
 První stav Trigger nám umožní poslat přesně 10 us dlouhý trigger signál do modulu, který vypustí vysokofrekvenční impulzy z vysílače.
 &nbsp;
@@ -76,7 +71,6 @@ Druhý stav Pulse kontroluje, jestli se vyslané impulzy odrazily a vrátily na 
 Třetí stav Echo měří čas, jak dlouho je echo v aktivní úrovni.
 &nbsp;
     ![Echo](../../Images/Project/prj_echo.png)
-    &nbsp;	
     
 Čtvrtý stav Calc provede výpočet a převede daný čas na vzdálenost od překážky.
 
