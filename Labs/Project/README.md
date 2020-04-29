@@ -20,7 +20,7 @@ Tento modul umožňuje spolehlivou detekci v rozmezí 2 centimetrů až 4 metrů
 
 Ultrazvukový měřič vyžaduje pro spuštění na vstup Trig signál (High) po dobu alespoň 10 mikrosekund. Modul vyšle vysokofrekvenční pulzy (40 kHz). Po vyslání se spustí Echo (High). Pokud se signál se odrazí od překážky, přijímač jej zachytí a ukončí trvání Echo. Pomocí tohoto impulzu vypočítáme vzdálenost v milimetrech.  
 
-Vyjdeme ze vzorce _s = t * v_. Za _v_ dosadíme pro zjednodušení rychlost zvuku při 20 _°C_ jako konstantu, _t_ bude doba impulzu Echo. Rychlost převedeme na vhodné jednotky (340 _m/s_ -> 0,34 _mm/us_) a protože měříme signál odražený, podělíme dvěma (0,17). Číslo vyjádříme jako binární na 16 bitů, abychom jej mohli přímo vynásobit dobou Echa. Výsledek poté převedeme zpátky pomocí konvertoru na dekadické číslo a po číslovkách vysvítíme na 7 segmentovém displeji. Na něm desetinnou čárkou uděláme z milimetrů centimetry.
+Vyjdeme ze vzorce _s = t * v_. Za _v_ dosadíme pro zjednodušení rychlost zvuku při 20 _°C_ jako konstantu, _t_ bude doba impulzu Echo. Rychlost převedeme na vhodné jednotky (340 _m/s_ -> 0,34 _mm/us_) a protože měříme signál odražený, podělíme dvěma (0,17). Číslo vyjádříme jako binární na 16 bitů, abychom jej mohli přímo vynásobit dobou Echa. Výsledek poté převedeme zpátky pomocí konvertoru na dekadické číslo a po číslovkách vysvítíme na 7 segmentovém displeji. Poslední displej oddělíme desetinou čárkou, čímž zobrazíme centimetry.
 
 &nbsp;
     ![Signals](../../Images/Project/prj_signaly.png)
@@ -33,6 +33,7 @@ Modul HC-SR04 má 4 propojovací piny - VCC (+5V), GND (zem), Trig a Echo (datov
 ## Implementace
 
 ### Modul top
+
 #### Schéma
 &nbsp;
     ![Top](../../Images/Project/prj_top_sch.png)
@@ -40,6 +41,7 @@ Modul HC-SR04 má 4 propojovací piny - VCC (+5V), GND (zem), Trig a Echo (datov
 #### Odkaz na kód: [top](/Labs/Project/hc-sr04_edit/Top.vhd)
 
 ### Ovladač hc-sr04 
+
 #### Stavový diagram
 &nbsp;
     ![States Diagram](../../Images/Project/prj_states.png)
@@ -66,10 +68,14 @@ Pátý stav Reset čeká, aby celý proces trval alespoň 65 ms, výsledek měř
     ![Reset](../../Images/Project/prj_reset.png)
     &nbsp;
     _Stav Reset čeká na čítač s_cntMax (fialově), tedy 65 ms, a následně vypíše výsledek měření (červeně) a celý proces se opakuje._
-    
 #### Odkaz na kód: [hc-sr04 driver](/Labs/Project/hc-sr04_edit/hc_sr04.vhd)
 
 ### Převadeč binárního čísla na dekadické
+Algoritmus: 
+1. posuň o jeden bit doleva 
+2. pokud má hodnotu rovnu nebo větší než 5, přičti 3
+3. opakuj 1. a 2. dokud je co posunovat
+
 &nbsp;
     ![Echo](../../Images/Project/prj_bin2bcd.png)
     &nbsp;
@@ -92,7 +98,14 @@ TBD
 ## Zdroje
 
 https://navody.arduino-shop.cz/navody-k-produktum/meric-vzdalenosti-ultrazvukovy.html
+
 https://dronebotworkshop.com/hc-sr04-ultrasonic-distance-sensor-arduino/
+
 https://www.academia.edu/29188168/Obstacle_avoidance_robot_using_FPGA_VHDL
+
 FPGA Basics #5: Distance meter https://www.youtube.com/watch?v=lLhFK_vE1ec
+
+FPGA Basics #6: Binary to decimal https://www.youtube.com/watch?v=5SSLahxw7Vw
+
+https://github.com/albaruizgo/CICT_Project_Binary-BCDconverter
 
