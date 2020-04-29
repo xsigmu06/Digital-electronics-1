@@ -52,7 +52,6 @@ FPGA Coolrunner nemá možnosť pripojenia modulu s napájaním 5V preto je potr
     &nbsp;
 &nbsp;
     ![Top1](../../Images/Project/prj_top1_sch.png)
-    &nbsp;
 #### Odkaz na kód: [top](/Labs/Project/hc-sr04_edit/Top.vhd)
 
 ### Ovladač hc-sr04 
