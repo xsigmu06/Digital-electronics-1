@@ -110,27 +110,46 @@ Pátý stav _Reset_ čeká, aby celý proces trval alespoň 65 _ms_, výsledek m
 Rozdělí signál _clock_ na nastavitelný počet period. Díky tomu můžeme _clock_ signálem o dané frekvenci ovládat moduly v jiných intervalech. Používáme clock o 1 _MHz_ (jedna perioda je 1 _us_), a aby se např. sedmisegmentové displeje zapínaly ve 4 _ms_ intervalech, musíme nastavit konstantu _g_NPERIOD_ na 4000 (x"0FA0").
 ```vhdl
 ...
-
     --------------------------------------------------------------------
     -- Sub-block of clock_enable entity.
 	CLK_EN : entity work.clock_enable
 		generic map (
 			g_NPERIOD => x"0FA0"	-- @ 4 ms if fclk = 1 MHz
-		)
-		
-...
+		)		
+		...
 ```
 #### Odkaz na kód: [clock enable](/Labs/Project/prj_hc-sr04/clock_enable.vhd)
 
 ### Ovladač 7 segmentového displeje
+Ovládá 4 displeje s desetinnou tečkou. Přepíná mezi nimi ve 4 _ms_ intervalech. 
+```vhdl
+...
+--------------------------------------------------------------------
+    -- p_mux:
+    -- Combinational process which implements a 4-to-1 mux.
+    --------------------------------------------------------------------
+    p_mux : process (s_cnt, data0_i, data1_i, data2_i, data3_i, dp_i)
+    begin
+        case s_cnt is
+		
+        when "00" => 
+            s_hex 	<= data0_i;
+            dp_o	<= dp_i(0);
+            dig_o 	<= "1110";
+			
+        when "01" =>
+            s_hex 	<= data1_i;
+            dp_o 	<= dp_i(1);
+            dig_o 	<= "1101";
+	...
+```	    
 #### Odkaz na kód: [7 segment display driver](/Labs/Project/prj_hc-sr04/driver_7seg.vhd)
 
 
 ### Převadeč hexadecimálního čísla na 7 segmentový displej
-Ovládá jaké segmenty se při jakém čísle mají vysvítit.
+Ovládá jaké segmenty se při daném čísle mají vysvítit.
 ```vhdl
 ...
-
 ------------------------------------------------------------------------
 architecture Behavioral of hex_to_7seg is
 begin
@@ -151,9 +170,8 @@ begin
              "0010010" when (hex_i = "0010") else   -- 2
              "0000110" when (hex_i = "0011") else   -- 3
              "1001100" when (hex_i = "0100") else   -- 4
-             "0100100" when (hex_i = "0101") else   -- 5
-	     		
-...
+             "0100100" when (hex_i = "0101") else   -- 5	     		
+	     ...
 ```
 #### Odkaz na kód: [hex to 7 segment display](/Labs/Project/prj_hc-sr04/hex_to_7seg.vhd)
 
