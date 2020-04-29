@@ -58,18 +58,6 @@ architecture Behavioral of hc_sr04 is
 begin
 	
 	--------------------------------------------------------------------
-    -- Sub-block of clock_enable entity.
---	CLK_EN : entity work.clock_enable
---		generic map (
---			g_NPERIOD => x"0001"        -- @ 1 us if fclk = 1 MHz
---		)
---		port map (
---			srst_n_i 		=> srst_n_i,
---			clk_i 			=> clk_i,
---			clock_enable_o	=> s_en
---		);
-	
-	--------------------------------------------------------------------
     -- measure:
     -- Sequential process with synchronous reset and clock enable,
     -- which implements a FSM for measuring duration of the 
@@ -85,7 +73,6 @@ begin
 				s_cntMax 	<= (others => '0');
 				s_state 	<= Trigger;	-- state 0
 
---			elsif s_en = '1' then
 			else
 				case s_state is
 				
