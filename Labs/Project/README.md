@@ -54,6 +54,7 @@ FPGA Coolrunner nemá možnosť pripojenia modulu s napájaním 5V preto je potr
 
 ### Ovladač hc-sr04 
 #### Stavový diagram
+&nbsp;
     ![States Diagram](../../Images/Project/prj_states.png)
 #### Popis stavů    
 První stav Trigger nám umožní poslat přesně 10 us dlouhý trigger signál do modulu, který vypustí vysokofrekvenční impulzy z vysílače.
@@ -75,7 +76,6 @@ Třetí stav Echo měří čas, jak dlouho je echo v aktivní úrovni.
 Čtvrtý stav Calc provede výpočet a převede daný čas na vzdálenost od překážky.
 
 Pátý stav Reset čeká, aby celý proces trval alespoň 65 ms, výsledek měření přiřadí do výstupu a následně přejde do stavu prvního.
-&nbsp;
     ![Reset](../../Images/Project/prj_reset.png)
     &nbsp;
     _Stav Reset čeká na čítač s_cntMax (fialově), tedy 65 ms, a následně vypíše výsledek měření (červeně) a celý proces se opakuje._
