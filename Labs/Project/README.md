@@ -107,8 +107,17 @@ Pátý stav Reset čeká, aby celý proces trval alespoň 65 ms, výsledek měř
 
 
 ### Clock enable
+Rozdělí signál clock na nastavitelný počet period. Díky tomu můžeme clock signálem o dané frekvenci ovládat moduly v jiných intervalech. Používáme clock o 1 MHz (jedna perioda je 1 _us_), a aby se např. sedmisegmentové displeje zapínaly ve 4 _ms_ intervalech, musíme nastavit konstantu g_NPERIOD na 4000 (x"0FA0").
+```vhdl
+    --------------------------------------------------------------------
+    -- Sub-block of clock_enable entity.
+	CLK_EN : entity work.clock_enable
+		generic map (
+			g_NPERIOD => x"0FA0"	-- @ 4 ms if fclk = 1 MHz
+		)
+...
+```
 #### Odkaz na kód: [clock enable](/Labs/Project/prj_hc-sr04/clock_enable.vhd)
-Rozdělí signál clock na nastavitelný počet period. Díky tomu můžeme clock signálem o dané frekvenci ovládat moduly v jiných intervalech.
 
 ### Ovladač 7 segmentového displeje
 #### Odkaz na kód: [7 segment display driver](/Labs/Project/prj_hc-sr04/driver_7seg.vhd)
