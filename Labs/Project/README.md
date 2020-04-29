@@ -70,6 +70,7 @@ Třetí stav Echo měří čas, jak dlouho je echo v aktivní úrovni.
 &nbsp;
     ![Echo](../../Images/Project/prj_echo.png)
     &nbsp;	
+    
 Čtvrtý stav Calc provede výpočet a převede daný čas na vzdálenost od překážky.
 
 Pátý stav Reset čeká, aby celý proces trval alespoň 65 ms, výsledek měření přiřadí do výstupu a následně přejde do stavu prvního.
