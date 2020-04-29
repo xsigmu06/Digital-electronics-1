@@ -35,16 +35,16 @@ Modul HC-SR04 má 4 propojovací piny - VCC (+5V), GND (zem), Trig a Echo (datov
 
 #### Schéma
 &nbsp;
-    ![Top](../../Images/Project/prj_top_sch.png)
-    ![Top1](../../Images/Project/prj_top1_sch.png)
+    ![Top schema](../../Images/Project/prj_top_sch.png)
+    ![Top1 schema](../../Images/Project/prj_top1_sch.png)
     
 #### Test
 &nbsp;
-    ![Trigger](../../Images/Project/prj_top.png)
+    ![Top tb](../../Images/Project/prj_top.png)
     &nbsp;
     _Echo (červeně) dlouhé 236 us. Tedy vzdálenost by měla být 236 * 0,17 = 40 mm._
 &nbsp;
-    ![Trigger](../../Images/Project/prj_top1.png)  
+    ![Top tb1](../../Images/Project/prj_top1.png)  
     _Vzdálenost s_dist (fialově) ukazuje správně 40 mm. Displej začíná vysvěcovat: první segment 1110 (oranžově) ukáže nulu 0000001 (červeně), druhý 1101 (červ.) + desetinná čárka (modře) čtyřku 1001100 a zbytek 1011 a 0111 budou nuly. Displeje se vysvěcují postupně po 4 _ms_. Uvidíme tedy 004.0 centimetrů._
 #### Odkaz na kód: [top](/Labs/Project/hc-sr04_edit/Top.vhd)
 
@@ -57,24 +57,24 @@ Modul HC-SR04 má 4 propojovací piny - VCC (+5V), GND (zem), Trig a Echo (datov
 #### Popis stavů    
 První stav Trigger nám umožní poslat přesně 10 us dlouhý trigger signál do modulu, který vypustí vysokofrekvenční impulzy z vysílače.
 &nbsp;
-    ![Trigger](../../Images/Project/prj_trig.png)
+    ![Trigger tb](../../Images/Project/prj_trig.png)
     &nbsp;
     _Řídící signál trigger (červeně) trvá 10 us než přejde na další stav._
     
 Druhý stav Pulse kontroluje, jestli se vyslané impulzy odrazily a vrátily na přijímač. Jestliže není vrácené echo detekované do 65 ms, vrátí se zpět na stav první.
 &nbsp;
-    ![Pulse](../../Images/Project/prj_pulse.png)
+    ![Pulse tb](../../Images/Project/prj_pulse.png)
     &nbsp;
     _Stav Pulse čeká na odražený impulz echo (červeně) a následující stav Echo spustí čítač (fialově) na měření jeho délky._
     
 Třetí stav Echo měří čas, jak dlouho je echo v aktivní úrovni.
 &nbsp;
-    ![Echo](../../Images/Project/prj_echo.png)
+    ![Echo tb](../../Images/Project/prj_echo.png)
     
 Čtvrtý stav Calc provede výpočet a převede daný čas na vzdálenost od překážky.
 
 Pátý stav Reset čeká, aby celý proces trval alespoň 65 ms, výsledek měření přiřadí do výstupu a následně přejde do stavu prvního.
-    ![Reset](../../Images/Project/prj_reset.png)
+    ![Reset tb](../../Images/Project/prj_reset.png)
     &nbsp;
     _Stav Reset čeká na čítač s_cntMax (fialově), tedy 65 ms, a následně vypíše výsledek měření (červeně) a celý proces se opakuje._
 #### Odkaz na kód: [hc-sr04 driver](/Labs/Project/hc-sr04_edit/hc_sr04.vhd)
@@ -82,19 +82,19 @@ Pátý stav Reset čeká, aby celý proces trval alespoň 65 ms, výsledek měř
 
 ### Převadeč binárního čísla na dekadické
 &nbsp;
-    ![Echo](../../Images/Project/prj_bin_bcd.png)
+    ![bin 2 bcd](../../Images/Project/prj_bin_bcd.png)
     &nbsp;
 &nbsp;
-    ![Echo](../../Images/Project/prj_bin_bcd_proc.png)
+    ![bin 2 bcd proces](../../Images/Project/prj_bin_bcd_proc.png)
     &nbsp;
 
 #### Test
 &nbsp;
-    ![Echo](../../Images/Project/prj_bin2bcd.png)
+    ![bin 2 bcd tb](../../Images/Project/prj_bin2bcd.png)
     &nbsp;
     _Dekadické zobrazení, vstupní číslo _dstnc_i_ (červeně) se rozdělí po číslovkách na stovky (metry), desítky (decimetry), jednotky (centimetry) a desetiny (milimetry)._    
 &nbsp;
-    ![Echo](../../Images/Project/prj_bin2bcd1.png)
+    ![bin 2 bcd tb1](../../Images/Project/prj_bin2bcd1.png)
     &nbsp; 
     _Binární. Stejné vstupní číslo _dstnc_i_ (červeně) se podle algoritmu rozdělí na 4x 4 bity a těchto 16 bitů se následně vypíše do _num_bcd_ (fialově)._
 #### Odkaz na kód: [binary to bcd converter](/Labs/Project/hc-sr04_edit/binary_2bcd.vhd)
