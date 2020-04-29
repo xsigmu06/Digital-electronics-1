@@ -50,6 +50,34 @@ FPGA Coolrunner nemá možnosť pripojenia modulu s napájaním 5V preto je potr
 &nbsp;
     ![States Diagram](../../Images/Project/prj_states.png)
     &nbsp;
+    
+První stav Trigger nám umožní poslat přesně 10 us dlouhý trigger signál do modulu, který vypustí vysokofrekvenční impulzy z vysílače.
+
+&nbsp;
+    ![Trigger](../../Images/Project/prj_trigger.png)
+    &nbsp;
+    
+Druhý stav Pulse kontroluje, jestli se vyslané impulzy odrazily a vrátily na přijímač. Jestliže není vrácené echo detekované do 65 ms, vrátí se zpět na stav první.
+
+&nbsp;
+    ![Pulse](../../Images/Project/prj_pulse.png)
+    &nbsp;
+    
+Třetí stav Echo měří čas, jak dlouho je echo v aktivní úrovni.
+ 
+&nbsp;
+    ![Echo](../../Images/Project/prj_echo.png)
+    &nbsp;
+	
+Čtvrtý stav Calc provede výpočet a převede daný čas na vzdálenost od překážky.
+
+
+Pátý stav Reset čeká, aby celý proces trval alespoň 65 ms, výsledek měření přiřadí do výstupu a následně přejde do stavu prvního.
+
+&nbsp;
+    ![Reset](../../Images/Project/prj_reset.png)
+    &nbsp;
+
 
 [binary to bcd converter](/Labs/Project/hc-sr04_edit/binary_2bcd.vhd)
 
