@@ -83,7 +83,7 @@ begin
 			if srst_n_i = '0' then
 				num_bcd <= (others => '0');
 				
-			elsif s_en= '1' then
+			elsif s_en = '1' then
 				-- Initialization of data to zero
 				z := (others => '0');
 				-- First three left shifts

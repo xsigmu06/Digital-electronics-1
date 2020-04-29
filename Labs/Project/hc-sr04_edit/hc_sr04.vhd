@@ -52,21 +52,22 @@ architecture Behavioral of hc_sr04 is
 
 	constant trigStart 	: unsigned (3 downto 0) := "1010";		-- controls trigger to be 10 us long along with s_cntTrig 
 	constant soundSpeed : unsigned (15 downto 0) := "0010101110000101"; -- speed of sound mm/us divided by 2 in 16 bits ( 0.17 * 2^16 = 11141 )
-	constant maxDist 	: unsigned (15 downto 0) := x"FFFF";  		-- max distance (2 x 4 m)
+	constant period 	: unsigned (15 downto 0) := x"FFFF";  	-- to prevent trigger into echo
+	constant maxMeas	: unsigned (15 downto 0) := x"5BEA";	-- max time (23 530)
 		
 begin
 	
 	--------------------------------------------------------------------
     -- Sub-block of clock_enable entity.
-	CLK_EN : entity work.clock_enable
-		generic map (
-			g_NPERIOD => x"0001"        -- @ 1 us if fclk = 1 MHz
-		)
-		port map (
-			srst_n_i 		=> srst_n_i,
-			clk_i 			=> clk_i,
-			clock_enable_o	=> s_en
-		);
+--	CLK_EN : entity work.clock_enable
+--		generic map (
+--			g_NPERIOD => x"0001"        -- @ 1 us if fclk = 1 MHz
+--		)
+--		port map (
+--			srst_n_i 		=> srst_n_i,
+--			clk_i 			=> clk_i,
+--			clock_enable_o	=> s_en
+--		);
 	
 	--------------------------------------------------------------------
     -- measure:
@@ -84,11 +85,13 @@ begin
 				s_cntMax 	<= (others => '0');
 				s_state 	<= Trigger;	-- state 0
 
-			elsif s_en = '1' then
+--			elsif s_en = '1' then
+			else
 				case s_state is
 				
 				when Trigger =>
 					trig_o 	<= '1';
+					s_result <= (others => '0');
 				
 					if s_cntTrig < trigStart then	
 						s_cntTrig 	<= s_cntTrig + x"1";
@@ -106,7 +109,7 @@ begin
 						s_cntMax 	<= s_cntMax + 1;
 						s_state 	<= Echo;
 						
-					elsif s_cntMax < maxDist then
+					elsif s_cntMax < period then
 						s_cntMax 	<= s_cntMax + 1;
 						s_state 	<= Pulse;
 						
@@ -116,7 +119,7 @@ begin
 					end if;
 
 				when Echo => 
-					if echo_i = '1' AND s_cntMax < maxDist then					
+					if echo_i = '1' AND s_cntMeas < maxMeas then					
 						s_cntMeas 	<= s_cntMeas + 1;
 						s_cntMax 	<= s_cntMax + 1;
 						s_state 	<= Echo;
@@ -130,7 +133,7 @@ begin
 					s_state		<= Reset;
 					
 				when Reset =>
-					if s_cntMax < maxDist then
+					if s_cntMax < period then
 						s_cntMax <= s_cntMax + 1;
 						
 					else						
