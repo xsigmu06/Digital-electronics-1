@@ -52,7 +52,7 @@ architecture Behavioral of hc_sr04 is
 
 	constant trigStart 	: unsigned (3 downto 0) := "1010";		-- controls trigger to be 10 us long along with s_cntTrig 
 	constant soundSpeed 	: unsigned (15 downto 0) := "0010101110000101"; -- speed of sound mm/us divided by 2 in 16 bits ( 0.17 * 2^16 = 11141 )
-	constant maxDist 	: unsigned (15 downto 0) := x"1FFF";  		-- max distance (2 x 4 m) 8191
+	constant maxDist 	: unsigned (15 downto 0) := x"FFFF";  		-- max distance (2 x 4 m)
 		
 begin
 	
