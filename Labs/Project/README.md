@@ -77,10 +77,7 @@ Pátý stav Reset čeká, aby celý proces trval alespoň 65 ms, výsledek měř
 &nbsp;
     ![Echo](../../Images/Project/prj_bin_bcd_proc.png)
     &nbsp;
-Algoritmus: 
-1. posuň o jeden bit doleva 
-2. pokud má hodnotu rovnu nebo větší než 5, přičti 3
-3. opakuj 1. a 2. dokud je co posunovat
+
 
 &nbsp;
     ![Echo](../../Images/Project/prj_bin2bcd.png)
