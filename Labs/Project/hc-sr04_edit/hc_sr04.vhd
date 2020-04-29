@@ -116,7 +116,7 @@ begin
 					end if;
 
 				when Echo => 
-					if echo_i = '1' then					
+					if echo_i = '1' AND s_cntMax < maxDist then					
 						s_cntMeas 	<= s_cntMeas + 1;
 						s_cntMax 	<= s_cntMax + 1;
 						s_state 	<= Echo;
