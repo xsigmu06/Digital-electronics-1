@@ -87,14 +87,15 @@ begin
 				case s_state is
 				
 				when Trigger =>
+					trig_o 		<= '1';
+				
 					if s_cntTrig < trigStart then	
-						trig_o 		<= '1';
 						s_cntTrig 	<= s_cntTrig + x"1";
 						s_state 	<= Trigger;
+				
 					else 
-					
 						trig_o 		<= '0';
-						s_cntTrig 	<= "0000" ;
+						s_cntTrig 	<= "0000";
 						s_state 	<= Pulse;						
 					end if;
 					
