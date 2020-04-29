@@ -32,7 +32,7 @@ entity hc_sr04 is
 		echo_i 		: in  STD_LOGIC;
 		
 		trig_o 	: out  STD_LOGIC := '0' ;
-		dstnc_o : out STD_LOGIC_VECTOR (11 downto 0) := x"000" -- max 4000 mm ( x"FA0" )
+		dstnc_o : out STD_LOGIC_VECTOR (11 downto 0) := x"000" 	-- max 4000 mm ( x"FA0" )
 	);
 end hc_sr04;
 
@@ -45,14 +45,14 @@ architecture Behavioral of hc_sr04 is
 
 	signal s_state		: state_type;
 	signal s_cntTrig	: unsigned (3 downto 0) := (others => '0');	-- controls trigger to be 10 us long along with trigStart 
-	signal s_cntMeas	: unsigned (14 downto 0) := (others => '0'); -- maximum duration of echo : (2 x 4 m) / 340 m/s = 23 530 us -> 15 bits ( 2^15 = 32 768 )
+	signal s_cntMeas	: unsigned (14 downto 0) := (others => '0'); 	-- maximum duration of echo : (2 x 4 m) / 340 m/s = 23 530 us -> 15 bits ( 2^15 = 32 768 )
 	signal s_cntMax 	: unsigned (15 downto 0) := (others => '0'); 
-	signal s_result 	: STD_LOGIC_VECTOR (30 downto 0); 	-- := (others => '0'); 
+	signal s_result 	: STD_LOGIC_VECTOR (30 downto 0); 
 	signal s_en 		: STD_LOGIC;
 
-	constant trigStart 	: unsigned (3 downto 0) := "1010";	-- controls trigger to be 10 us long along with s_cntTrig 
+	constant trigStart 	: unsigned (3 downto 0) := "1010";		-- controls trigger to be 10 us long along with s_cntTrig 
 	constant soundSpeed 	: unsigned (15 downto 0) := "0010101110000101"; -- speed of sound mm/us divided by 2 in 16 bits ( 0.17 * 2^16 = 11141 )
-	constant maxDist 	: unsigned (15 downto 0) := x"1FFF";  -- max distance (2 x 4 m) 8191
+	constant maxDist 	: unsigned (15 downto 0) := x"1FFF";  		-- max distance (2 x 4 m) 8191
 		
 begin
 	
