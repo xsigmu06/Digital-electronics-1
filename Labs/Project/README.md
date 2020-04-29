@@ -46,7 +46,7 @@ Modul HC-SR04 má 4 propojovací piny - VCC (+5V), GND (zem), Trig a Echo (datov
 &nbsp;
     ![Top tb1](../../Images/Project/prj_top1.png)  
     _Vzdálenost s_dist (fialově) ukazuje správně 40 mm. Displej začíná vysvěcovat: první segment 1110 (oranžově) ukáže nulu 0000001 (červeně), druhý 1101 (červ.) + desetinná čárka (modře) čtyřku 1001100 a zbytek 1011 a 0111 budou nuly. Displeje se vysvěcují postupně po 4 _ms_. Uvidíme tedy 004.0 centimetrů._
-#### Odkaz na kód: [top](/Labs/Project/hc-sr04_edit/Top.vhd)
+#### Odkaz na kód: [top](/Labs/Project/prj_hc-sr04/Top.vhd)
 
 
 ### Ovladač hc-sr04 
@@ -77,7 +77,7 @@ Pátý stav Reset čeká, aby celý proces trval alespoň 65 ms, výsledek měř
     ![Reset tb](../../Images/Project/prj_reset.png)
     &nbsp;
     _Stav Reset čeká na čítač s_cntMax (fialově), tedy 65 ms, a následně vypíše výsledek měření (červeně) a celý proces se opakuje._
-#### Odkaz na kód: [hc-sr04 driver](/Labs/Project/hc-sr04_edit/hc_sr04.vhd)
+#### Odkaz na kód: [hc-sr04 driver](/Labs/Project/prj_hc-sr04/hc_sr04.vhd)
 
 
 ### Převadeč binárního čísla na dekadické
@@ -103,19 +103,19 @@ Pátý stav Reset čeká, aby celý proces trval alespoň 65 ms, výsledek měř
     ![bin 2 bcd tb1](../../Images/Project/prj_bin2bcd1.png)
     &nbsp; 
     _Binární. Stejné vstupní číslo _dstnc_i_ (červeně) se podle algoritmu rozdělí na 4x 4 bity a těchto 16 bitů se následně vypíše do _num_bcd_ (fialově)._
-#### Odkaz na kód: [binary to bcd converter](/Labs/Project/hc-sr04_edit/binary_2bcd.vhd)
+#### Odkaz na kód: [binary to bcd converter](/Labs/Project/prj_hc-sr04/binary_2bcd.vhd)
 
 
 ### Clock enable
-#### Odkaz na kód: [clock enable](/Labs/Project/hc-sr04_edit/clock_enable.vhd)
+#### Odkaz na kód: [clock enable](/Labs/Project/prj_hc-sr04/clock_enable.vhd)
 
 
 ### Ovladač 7 segmentového displeje
-#### Odkaz na kód: [7 segment display driver](/Labs/Project/hc-sr04_edit/driver_7seg.vhd)
+#### Odkaz na kód: [7 segment display driver](/Labs/Project/prj_hc-sr04/driver_7seg.vhd)
 
 
 ### Převadeč hexadecimálního čísla na 7 segmentový displej
-#### Odkaz na kód: [hex to 7 segment display](/Labs/Project/hc-sr04_edit/hex_to_7seg.vhd)
+#### Odkaz na kód: [hex to 7 segment display](/Labs/Project/prj_hc-sr04/hex_to_7seg.vhd)
 
 
 ## Zdroje
