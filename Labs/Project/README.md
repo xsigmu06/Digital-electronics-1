@@ -40,13 +40,11 @@ Modul HC-SR04 má 4 propojovací piny - VCC (+5V), GND (zem), Trig a Echo (datov
     ![Top1](../../Images/Project/prj_top1_sch.png)
     
 #### Test
-&nbsp;
     ![Trigger](../../Images/Project/prj_top.png)
     &nbsp;
     _Echo (červeně) dlouhé 236 us. Tedy vzdálenost by měla být 236 * 0,17 = 40 mm._
 &nbsp;
-    ![Trigger](../../Images/Project/prj_top1.png)
-    &nbsp;    
+    ![Trigger](../../Images/Project/prj_top1.png)  
     _Vzdálenost s_dist (fialově) ukazuje správně 40 mm. Displej začíná vysvěcovat: první segmentu 1110 (oranžově) ukáže nulu 0000001 (červeně), druhý 1101 (červ.) + desetinná čárka (modře) čtverku 1001100 a zbytek 1011 a 0111 budou nuly. Uvidíme tedy 004.0 centimetrů._
 #### Odkaz na kód: [top](/Labs/Project/hc-sr04_edit/Top.vhd)
 
