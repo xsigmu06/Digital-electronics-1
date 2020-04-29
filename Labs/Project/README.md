@@ -4,7 +4,7 @@
 
 1. [Úvod](#Úvod)
 2. [Princip](#Princip)
-3. [Popis kódu](#Popis-kódu)
+3. [Implementace](#Implementace)
 4. [Video](#Video)
 5. [Zdroje](#Zdroje)
 
@@ -42,7 +42,7 @@ FPGA Coolrunner nemá možnosť pripojenia modulu s napájaním 5V preto je potr
     ![HC-SR04states](../../Images/Project/hcsr04states.png)
     &nbsp;
  
-## Popis kódu
+## Implementace
 
 ### Modul top
 #### Schéma
