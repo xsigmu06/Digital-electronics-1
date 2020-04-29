@@ -40,6 +40,7 @@ Modul HC-SR04 má 4 propojovací piny - VCC (+5V), GND (zem), Trig a Echo (datov
     ![Top1](../../Images/Project/prj_top1_sch.png)
     
 #### Test
+&nbsp;
     ![Trigger](../../Images/Project/prj_top.png)
     &nbsp;
     _Echo (červeně) dlouhé 236 us. Tedy vzdálenost by měla být 236 * 0,17 = 40 mm._
