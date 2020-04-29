@@ -132,7 +132,7 @@ Ovládá 4 displeje s desetinnou tečkou. Přepíná mezi nimi ve 4 _ms_ interva
     begin
         case s_cnt is
 		
-        when "00" => 
+        when "00" => -- first display
             s_hex 	<= data0_i;
             dp_o	<= dp_i(0);
             dig_o 	<= "1110";
