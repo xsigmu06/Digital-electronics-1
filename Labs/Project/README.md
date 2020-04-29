@@ -35,7 +35,10 @@ Vyjdeme ze vzorce _s = t * v_. Za _v_ dosadíme rychlost zvuku při 20 _°C_ (34
 
 TBD
 
-## States
+## Pripojenie HC-SR04 ku Coolrunner-II
+FPGA Coolrunner nemá možnosť pripojenia modulu s napájaním 5V preto je potrebné prepojiť modul HC-SR04 s externým napájaním. Vychádzame z týchto možností odporúčaných  výrobcom v dokumente [5V tollerance](/Labs/Project/5vtollerance.pdf). Zvolili sme pripojenie s pomocou integrovaného obvodu (napr. ON Semiconductor’s MC74VHC1GT50).
+
+
 &nbsp;
     ![HC-SR04states](../../Images/Project/hcsr04states.png)
     &nbsp;
