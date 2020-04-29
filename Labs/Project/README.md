@@ -46,7 +46,7 @@ FPGA Coolrunner nemá možnosť pripojenia modulu s napájaním 5V preto je potr
 ## Popis kódu
 
 ### Modul top
-[top](/Labs/Project/hc-sr04_edit/Top.vhd)
+#### Odkaz na kód: [top](/Labs/Project/hc-sr04_edit/Top.vhd)
 
 ### Ovladač hc-sr04 
 #### Stavový diagram
@@ -79,24 +79,19 @@ Pátý stav Reset čeká, aby celý proces trval alespoň 65 ms, výsledek měř
     &nbsp;
     _Stav Reset čeká na čítač s_cntMax (fialově), tedy 65 ms, a následně vypíše výsledek měření (červeně) a celý proces se opakuje._
     
-#### Odkaz na kód
-[hc-sr04 driver](/Labs/Project/hc-sr04_edit/hc_sr04.vhd)
+#### Odkaz na kód: [hc-sr04 driver](/Labs/Project/hc-sr04_edit/hc_sr04.vhd)
 
 ### Převadeč binárního čísla na dekadické
-#### Odkaz na kód
-[binary to bcd converter](/Labs/Project/hc-sr04_edit/binary_2bcd.vhd)
+#### Odkaz na kód: [binary to bcd converter](/Labs/Project/hc-sr04_edit/binary_2bcd.vhd)
 
 ### Clock enable
-#### Odkaz na kód
-[clock enable](/Labs/Project/hc-sr04_edit/clock_enable.vhd)
+#### Odkaz na kód: [clock enable](/Labs/Project/hc-sr04_edit/clock_enable.vhd)
 
 ### Ovladač 7 segmentového displeje
-#### Odkaz na kód
-[7 segment display driver](/Labs/Project/hc-sr04_edit/driver_7seg.vhd)
+#### Odkaz na kód: [7 segment display driver](/Labs/Project/hc-sr04_edit/driver_7seg.vhd)
 
 ### Převadeč hexadecimálního čísla na 7 segmentový displej
-#### Odkaz na kód
-[hex to 7 segment display](/Labs/Project/hc-sr04_edit/hex_to_7seg.vhd)
+#### Odkaz na kód: [hex to 7 segment display](/Labs/Project/hc-sr04_edit/hex_to_7seg.vhd)
 
 
 TBD
