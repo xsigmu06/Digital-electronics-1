@@ -17,7 +17,7 @@ Tento modul umožňuje spolehlivou detekci v rozmezí 2 centimetrů až 4 metrů
 
 ## Princip
 
-Ultrazvukový měřič vyžaduje pro spuštění na vstup Trig signál (High) po dobu alespoň 10 mikrosekund. Modul vyšle vysokofrekvenční pulzy (40 kHz). Po vyslání se spustí Echo (High). Pokud se signál se odrazí od překážky, přijímač jej zachytí a ukončí trvání Echo. Pomocí tohoto impulzu vypočítáme vzdálenost v milimetrech.  
+Ultrazvukový měřič vyžaduje pro spuštění na vstup _Trig_ signál (_High_) po dobu alespoň 10 mikrosekund. Modul vyšle vysokofrekvenční pulzy (40 kHz). Po vyslání se spustí _Echo_ (_High_). Pokud se signál se odrazí od překážky, přijímač jej zachytí a ukončí trvání Echo. Pomocí tohoto impulzu vypočítáme vzdálenost v milimetrech.  
 
 Vyjdeme ze vzorce _s = t * v_. Za _v_ dosadíme pro zjednodušení rychlost zvuku při 20 _°C_ jako konstantu, _t_ bude doba impulzu Echo. Rychlost převedeme na vhodné jednotky (340 _m/s_ -> 0,34 _mm/us_) a protože měříme signál odražený, podělíme dvěma (0,17). Číslo vyjádříme jako binární, abychom jej mohli přímo vynásobit dobou Echa. Výsledek poté převedeme zpátky pomocí konvertoru na dekadické číslo a po číslovkách vysvítíme na 7 segmentovém displeji. Poslední displej oddělíme desetinou čárkou, zobrazené číslo bude tedy v centimetrech.
 
@@ -27,7 +27,7 @@ Vyjdeme ze vzorce _s = t * v_. Za _v_ dosadíme pro zjednodušení rychlost zvuk
 
 ## Připojení HC-SR04 na Coolrunner-II CLPD starter board
 
-Modul HC-SR04 má 4 propojovací piny - VCC (+5V), GND (zem), Trig a Echo (datové piny). FPGA Coolrunner ale nemá možnost připojení modulu s napájením 5V, proto je potřeba propojit ultrazvukový měřič s externím napájením. Vycházíme z těchto možností doporučených výrobcem v dokumentu [5V tollerance](/Labs/Project/5vtollerance.pdf). Zvolili jsme připojení za pomocí integrovaného obvodu (např. ON Semiconductor’s MC74VHC1GT50).
+Modul HC-SR04 má 4 propojovací piny - _VCC_ (+5_V_), _GND_ (zem), _Trig_ a _Echo_ (datové piny). FPGA Coolrunner ale nemá možnost připojení modulu s napájením 5_V_, proto je potřeba propojit ultrazvukový měřič s externím napájením. Vycházíme z těchto možností doporučených výrobcem v dokumentu [5V tollerance](/Labs/Project/5vtollerance.pdf). Zvolili jsme připojení za pomocí integrovaného obvodu (např. ON Semiconductor’s MC74VHC1GT50).
  
 ## Implementace
 
@@ -45,7 +45,7 @@ Modul HC-SR04 má 4 propojovací piny - VCC (+5V), GND (zem), Trig a Echo (datov
     _Echo (červeně) dlouhé 236 us. Tedy vzdálenost by měla být 236 * 0,17 = 40 mm._
 &nbsp;
     ![Top tb1](../../Images/Project/prj_top1.png)  
-    _Vzdálenost s_dist (fialově) ukazuje správně 40 mm. Displej začíná vysvěcovat: první segment 1110 (oranžově) ukáže nulu 0000001 (červeně), druhý 1101 (červ.) + desetinná čárka (modře) čtyřku 1001100 a zbytek 1011 a 0111 budou nuly. Displeje se vysvěcují postupně po 4 _ms_. Uvidíme tedy 004.0 centimetrů._
+    _Vzdálenost _s_dist_ (fialově) ukazuje správně 40 mm. Displej začíná vysvěcovat: první segment 1110 (oranžově) ukáže nulu 0000001 (červeně), druhý 1101 (červ.) + desetinná čárka (modře) čtyřku 1001100 a zbytek 1011 a 0111 budou nuly. Displeje se vysvěcují postupně po 4 _ms_. Uvidíme tedy 004.0 centimetrů._
 #### Odkaz na kód: [top](/Labs/Project/prj_hc-sr04/Top.vhd)
 
 
