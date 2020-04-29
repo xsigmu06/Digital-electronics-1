@@ -127,6 +127,34 @@ Rozdělí signál _clock_ na nastavitelný počet period. Díky tomu můžeme _c
 
 
 ### Převadeč hexadecimálního čísla na 7 segmentový displej
+Ovládá jaké segmenty se při jakém čísle mají vysvítit.
+```vhdl
+...
+
+------------------------------------------------------------------------
+architecture Behavioral of hex_to_7seg is
+begin
+
+    --------------------------------------------------------------------
+    --         a
+    --       -----          a: seg_o(6)
+    --    f |     | b       b: seg_o(5)
+    --      |  g  |         c: seg_o(4)
+    --       -----          d: seg_o(3)
+    --    e |     | c       e: seg_o(2)
+    --      |     |         f: seg_o(1)
+    --       -----          g: seg_o(0)
+    --         d
+    --------------------------------------------------------------------
+    seg_o <= "0000001" when (hex_i = "0000") else   -- 0
+             "1001111" when (hex_i = "0001") else   -- 1
+             "0010010" when (hex_i = "0010") else   -- 2
+             "0000110" when (hex_i = "0011") else   -- 3
+             "1001100" when (hex_i = "0100") else   -- 4
+             "0100100" when (hex_i = "0101") else   -- 5
+	     		
+...
+```
 #### Odkaz na kód: [hex to 7 segment display](/Labs/Project/prj_hc-sr04/hex_to_7seg.vhd)
 
 
