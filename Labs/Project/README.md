@@ -81,9 +81,14 @@ Pátý stav Reset čeká, aby celý proces trval alespoň 65 ms, výsledek měř
 
 
 ### Převadeč binárního čísla na dekadické
+#### BCD kód
 &nbsp;
     ![bin 2 bcd](../../Images/Project/prj_bin_bcd.png)
     &nbsp;
+#### Algoritmus 
+1. posuň o jeden bit doleva 
+2. pokud má hodnotu rovnu nebo větší než 5, přičti 3
+3. opakuj 1. a 2. do posledního bitu
 &nbsp;
     ![bin 2 bcd proces](../../Images/Project/prj_bin_bcd_proc.png)
     &nbsp;
