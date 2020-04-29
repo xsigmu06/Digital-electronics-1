@@ -54,7 +54,7 @@ FPGA Coolrunner nemá možnosť pripojenia modulu s napájaním 5V preto je potr
 První stav Trigger nám umožní poslat přesně 10 us dlouhý trigger signál do modulu, který vypustí vysokofrekvenční impulzy z vysílače.
 
 &nbsp;
-    ![Trigger](../../Images/Project/prj_trigger.png)
+    ![Trigger](../../Images/Project/prj_trig.png)
     &nbsp;
     
 Druhý stav Pulse kontroluje, jestli se vyslané impulzy odrazily a vrátily na přijímač. Jestliže není vrácené echo detekované do 65 ms, vrátí se zpět na stav první.
