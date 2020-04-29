@@ -88,10 +88,15 @@ Pátý stav Reset čeká, aby celý proces trval alespoň 65 ms, výsledek měř
     ![Echo](../../Images/Project/prj_bin_bcd_proc.png)
     &nbsp;
 
-
+#### Test
 &nbsp;
     ![Echo](../../Images/Project/prj_bin2bcd.png)
     &nbsp;
+    _Dekadické zobrazení, vstupní číslo _dstnc_i_ (červeně) se rozdělí po číslovkách na stovky (metry), desítky (decimetry), jednotky (centimetry) a desetiny (milimetry)._    
+&nbsp;
+    ![Echo](../../Images/Project/prj_bin2bcd1.png)
+    &nbsp; 
+    _Binární. Stejné vstupní číslo _dstnc_i_ (červeně) se podle algoritmu rozdělí na 4x 4 bity a těchto 16 bitů se následně vypíše do _num_bcd_ (fialově)._
 #### Odkaz na kód: [binary to bcd converter](/Labs/Project/hc-sr04_edit/binary_2bcd.vhd)
 
 
