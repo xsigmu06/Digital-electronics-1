@@ -46,7 +46,7 @@ FPGA Coolrunner nemá možnosť pripojenia modulu s napájaním 5V preto je potr
 ## Code description
 [top](/Labs/Project/hc-sr04_edit/Top.vhd)
 
-# Driver hc-sr04 
+### Driver hc-sr04 
 [hc-sr04 driver](/Labs/Project/hc-sr04_edit/hc_sr04.vhd)
 
 &nbsp;
