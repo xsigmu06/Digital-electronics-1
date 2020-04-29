@@ -8,7 +8,6 @@
 4. [Video](#Video)
 5. [Zdroje](#Zdroje)
 
-
 ## Úvod
 
 &nbsp;
@@ -20,7 +19,7 @@ Tento modul umožňuje spolehlivou detekci v rozmezí 2 centimetrů až 4 metrů
 ## Princip
 
 Ultrazvukový měřič vyžaduje pro spuštění na vstup Trig signál (High) po dobu alespoň 10 mikrosekund. Modul vyšle vysokofrekvenční pulzy (40 kHz). Po vyslání se spustí Echo (High). Pokud se signál se odrazí od překážky, přijímač jej zachytí a ukončí trvání Echo. Pomocí tohoto impulzu vypočítáme vzdálenost v milimetrech.  
-Vyjdeme ze vzorce _s = t * v_. Za _v_ dosadíme pro zjednodušení rychlost zvuku při 20 _°C_ jako konstantu (343 _m/s_ -> 0,343 _mm/us_), _t_ bude doba impulzu Echo podělená dvěma (měří signál odražený).
+Vyjdeme ze vzorce _s = t * v_. Za _v_ dosadíme pro zjednodušení rychlost zvuku při 20 _°C_ jako konstantu, _t_ bude doba impulzu Echo podělená dvěma (měří signál odražený).
 
 &nbsp;
     ![Signals](../../Images/Project/prj_signaly.png)
@@ -28,8 +27,7 @@ Vyjdeme ze vzorce _s = t * v_. Za _v_ dosadíme pro zjednodušení rychlost zvuk
 
 ## Připojení HC-SR04 na Coolrunner-II CLPD starter board
 
-Modul HC-SR04 má 4 propojovací piny - VCC (+5V), GND (zem), Trig a Echo (datové piny).
-FPGA Coolrunner nemá možnost připojení modulu s napájením 5V, proto je potřeba propojit měřič s externím napájením. Vycházíme z těchto možností doporučených výrobcem v dokumentu [5V tollerance](/Labs/Project/5vtollerance.pdf). Zvolili jsme připojení za pomocí integrovaného obvodu (např. ON Semiconductor’s MC74VHC1GT50).
+Modul HC-SR04 má 4 propojovací piny - VCC (+5V), GND (zem), Trig a Echo (datové piny). FPGA Coolrunner ale nemá možnost připojení modulu s napájením 5V, proto je potřeba propojit ultrazvukový měřič s externím napájením. Vycházíme z těchto možností doporučených výrobcem v dokumentu [5V tollerance](/Labs/Project/5vtollerance.pdf). Zvolili jsme připojení za pomocí integrovaného obvodu (např. ON Semiconductor’s MC74VHC1GT50).
 
 &nbsp;
     ![HC-SR04states](../../Images/Project/hcsr04states.png)
@@ -90,15 +88,14 @@ Pátý stav Reset čeká, aby celý proces trval alespoň 65 ms, výsledek měř
 #### Odkaz na kód: [hex to 7 segment display](/Labs/Project/hc-sr04_edit/hex_to_7seg.vhd)
 
 
-TBD
-
-
 ## Video
 
 TBD
 
-
 ## Zdroje
 
 https://navody.arduino-shop.cz/navody-k-produktum/meric-vzdalenosti-ultrazvukovy.html
-TBD
+https://dronebotworkshop.com/hc-sr04-ultrasonic-distance-sensor-arduino/
+https://www.academia.edu/29188168/Obstacle_avoidance_robot_using_FPGA_VHDL
+FPGA Basics #5: Distance meter https://www.youtube.com/watch?v=lLhFK_vE1ec
+
