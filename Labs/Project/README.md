@@ -29,10 +29,6 @@ Vyjdeme ze vzorce _s = t * v_. Za _v_ dosadíme pro zjednodušení rychlost zvuk
 ## Připojení HC-SR04 na Coolrunner-II CLPD starter board
 
 Modul HC-SR04 má 4 propojovací piny - VCC (+5V), GND (zem), Trig a Echo (datové piny). FPGA Coolrunner ale nemá možnost připojení modulu s napájením 5V, proto je potřeba propojit ultrazvukový měřič s externím napájením. Vycházíme z těchto možností doporučených výrobcem v dokumentu [5V tollerance](/Labs/Project/5vtollerance.pdf). Zvolili jsme připojení za pomocí integrovaného obvodu (např. ON Semiconductor’s MC74VHC1GT50).
-
-&nbsp;
-    ![HC-SR04states](../../Images/Project/hcsr04states.png)
-    &nbsp;
  
 ## Implementace
 
