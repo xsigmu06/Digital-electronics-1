@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-04-28T19:56:42</DateModified>
+  <DateModified>2020-04-29T08:47:28</DateModified>
   <ModuleName>Top</ModuleName>
   <SummaryTimeStamp>2020-04-28T19:56:29</SummaryTimeStamp>
-  <SavedFilePath>/home/ise/ise/Project/hc-sr04/iseconfig/Top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/ise/ise/Project/hc-sr04/</ImplementationReportsDirectory>
+  <SavedFilePath>/home/ise/ise/hc-sr04_edit/iseconfig/Top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/ise/ise/hc-sr04_edit/</ImplementationReportsDirectory>
   <DateInitialized>2020-04-23T21:42:12</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

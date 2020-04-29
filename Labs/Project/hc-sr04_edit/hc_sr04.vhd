@@ -51,7 +51,7 @@ architecture Behavioral of hc_sr04 is
 	signal s_en 		: STD_LOGIC;
 
 	constant trigStart 	: unsigned (3 downto 0) := "1010";		-- controls trigger to be 10 us long along with s_cntTrig 
-	constant soundSpeed 	: unsigned (15 downto 0) := "0010101110000101"; -- speed of sound mm/us divided by 2 in 16 bits ( 0.17 * 2^16 = 11141 )
+	constant soundSpeed : unsigned (15 downto 0) := "0010101110000101"; -- speed of sound mm/us divided by 2 in 16 bits ( 0.17 * 2^16 = 11141 )
 	constant maxDist 	: unsigned (15 downto 0) := x"FFFF";  		-- max distance (2 x 4 m)
 		
 begin
@@ -81,13 +81,14 @@ begin
 			if srst_n_i = '0' then 	-- synchronous reset, active low
 				s_cntTrig 	<= (others => '0');
 				s_cntMeas 	<= (others => '0');
+				s_cntMax 	<= (others => '0');
 				s_state 	<= Trigger;	-- state 0
 
 			elsif s_en = '1' then
 				case s_state is
 				
 				when Trigger =>
-					trig_o 		<= '1';
+					trig_o 	<= '1';
 				
 					if s_cntTrig < trigStart then	
 						s_cntTrig 	<= s_cntTrig + x"1";
@@ -95,7 +96,7 @@ begin
 				
 					else 
 						trig_o 		<= '0';
-						s_cntTrig 	<= "0000";
+						s_cntTrig 	<= (others => '0');
 						s_state 	<= Pulse;						
 					end if;
 					
@@ -110,7 +111,7 @@ begin
 						s_state 	<= Pulse;
 						
 					else 
-						s_cntMax 	<= x"0000";
+						s_cntMax 	<= (others => '0');
 						s_state 	<= Trigger;					
 					end if;
 
@@ -126,16 +127,16 @@ begin
 					
 				when Calc => 		
 					s_result 	<= std_logic_vector(unsigned(s_cntMeas) * unsigned(soundSpeed));		
-					s_state 	<= Reset;
+					s_state		<= Reset;
 					
 				when Reset =>
 					if s_cntMax < maxDist then
-						s_cntMax 	<= s_cntMax + 1;
+						s_cntMax <= s_cntMax + 1;
 						
 					else						
 						dstnc_o 	<= s_result(27 downto 16);
-						s_cntMeas 	<= "000000000000000";
-						s_cntMax 	<= x"0000";
+						s_cntMeas 	<= (others => '0');
+						s_cntMax 	<= (others => '0');
 						s_state 	<= Trigger;					
 					end if;
 

@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "/home/ise/ise/Project/hc-sr04/hc_sr04_tb00_isim_beh.exe" -prj "/home/ise/ise/Project/hc-sr04/hc_sr04_tb00_beh.prj" "work.hc_sr04_tb00" 
+-intstyle "ise" -incremental -o "/home/ise/ise/hc-sr04_edit/HC_SR04_tb01_isim_beh.exe" -prj "/home/ise/ise/hc-sr04_edit/HC_SR04_tb01_beh.prj" "work.HC_SR04_tb01" 
