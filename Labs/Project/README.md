@@ -4,8 +4,7 @@
 
 1. [Úvod](#Úvod)
 2. [Princip](#Princip)
-
-3. [Code description](#Code-description)
+3. [Popis kódu](#Popis-kódu)
 4. [Video](#Video)
 5. [Zdroje](#Zdroje)
 
