@@ -83,6 +83,9 @@ Pátý stav Reset čeká, aby celý proces trval alespoň 65 ms, výsledek měř
 #### Odkaz na kód: [hc-sr04 driver](/Labs/Project/hc-sr04_edit/hc_sr04.vhd)
 
 ### Převadeč binárního čísla na dekadické
+&nbsp;
+    ![Echo](../../Images/Project/prj_bin2bcd.png)
+    &nbsp;
 #### Odkaz na kód: [binary to bcd converter](/Labs/Project/hc-sr04_edit/binary_2bcd.vhd)
 
 ### Clock enable
